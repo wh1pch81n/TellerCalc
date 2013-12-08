@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F044599174B2D29006FCC9F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F044594174B2D29006FCC9F /* Icon-Small-50.png */; };
+		7F04459A174B2D29006FCC9F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F044595174B2D29006FCC9F /* Icon-Small@2x.png */; };
+		7F04459B174B2D29006FCC9F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F044596174B2D29006FCC9F /* Icon-Small.png */; };
+		7F04459C174B2D29006FCC9F /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F044597174B2D29006FCC9F /* iTunesArtwork.png */; };
+		7F04459D174B2D29006FCC9F /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F044598174B2D29006FCC9F /* Icon-72.png */; };
+		7F04459F174B2DBC006FCC9F /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F04459E174B2DBC006FCC9F /* readme.txt */; };
+		7F09A8BB1747238E00572792 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F09A8BA1747238E00572792 /* Icon.png */; };
+		7F09A8BD174723DF00572792 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F09A8BC174723DF00572792 /* Icon@2x.png */; };
+		7FC03E111746F8BC00949AA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC03E101746F8BC00949AA5 /* UIKit.framework */; };
+		7FC03E131746F8BC00949AA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC03E121746F8BC00949AA5 /* Foundation.framework */; };
+		7FC03E151746F8BC00949AA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC03E141746F8BC00949AA5 /* CoreGraphics.framework */; };
+		7FC03E1B1746F8BC00949AA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FC03E191746F8BC00949AA5 /* InfoPlist.strings */; };
+		7FC03E1D1746F8BC00949AA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC03E1C1746F8BC00949AA5 /* main.m */; };
+		7FC03E211746F8BC00949AA5 /* DHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC03E201746F8BC00949AA5 /* DHAppDelegate.m */; };
+		7FC03E231746F8BC00949AA5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC03E221746F8BC00949AA5 /* Default.png */; };
+		7FC03E251746F8BC00949AA5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC03E241746F8BC00949AA5 /* Default@2x.png */; };
+		7FC03E271746F8BC00949AA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC03E261746F8BC00949AA5 /* Default-568h@2x.png */; };
+		7FC03E2A1746F8BC00949AA5 /* DHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC03E291746F8BC00949AA5 /* DHViewController.m */; };
+		7FC03E2D1746F8BC00949AA5 /* DHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC03E2B1746F8BC00949AA5 /* DHViewController.xib */; };
+		7FC03E351746FDA100949AA5 /* DHCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC03E341746FDA100949AA5 /* DHCalculator.m */; };
+		7FC03E381746FF4200949AA5 /* DHPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC03E371746FF4200949AA5 /* DHPair.m */; };
+		7FDE3F62174DAF9B00018315 /* ScreenShot1_4in.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDE3F5C174DAF9B00018315 /* ScreenShot1_4in.png */; };
+		7FDE3F63174DAF9B00018315 /* ScreenShot1_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDE3F5D174DAF9B00018315 /* ScreenShot1_ipad.png */; };
+		7FDE3F64174DAF9B00018315 /* ScreenShot1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDE3F5E174DAF9B00018315 /* ScreenShot1.png */; };
+		7FDE3F65174DAF9B00018315 /* ScreenShot2_4in.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDE3F5F174DAF9B00018315 /* ScreenShot2_4in.png */; };
+		7FDE3F66174DAF9B00018315 /* ScreenShot2_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDE3F60174DAF9B00018315 /* ScreenShot2_ipad.png */; };
+		7FDE3F67174DAF9B00018315 /* ScreenShot2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDE3F61174DAF9B00018315 /* ScreenShot2.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F044594174B2D29006FCC9F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		7F044595174B2D29006FCC9F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		7F044596174B2D29006FCC9F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		7F044597174B2D29006FCC9F /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		7F044598174B2D29006FCC9F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		7F04459E174B2DBC006FCC9F /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		7F09A8BA1747238E00572792 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		7F09A8BC174723DF00572792 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		7FC03E0D1746F8BC00949AA5 /* TellerCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TellerCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FC03E101746F8BC00949AA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7FC03E121746F8BC00949AA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7FC03E141746F8BC00949AA5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7FC03E181746F8BC00949AA5 /* TellerCalculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TellerCalculator-Info.plist"; sourceTree = "<group>"; };
+		7FC03E1A1746F8BC00949AA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7FC03E1C1746F8BC00949AA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7FC03E1E1746F8BC00949AA5 /* TellerCalculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TellerCalculator-Prefix.pch"; sourceTree = "<group>"; };
+		7FC03E1F1746F8BC00949AA5 /* DHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHAppDelegate.h; sourceTree = "<group>"; };
+		7FC03E201746F8BC00949AA5 /* DHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHAppDelegate.m; sourceTree = "<group>"; };
+		7FC03E221746F8BC00949AA5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7FC03E241746F8BC00949AA5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7FC03E261746F8BC00949AA5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7FC03E281746F8BC00949AA5 /* DHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHViewController.h; sourceTree = "<group>"; };
+		7FC03E291746F8BC00949AA5 /* DHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHViewController.m; sourceTree = "<group>"; };
+		7FC03E2C1746F8BC00949AA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DHViewController.xib; sourceTree = "<group>"; };
+		7FC03E331746FDA100949AA5 /* DHCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCalculator.h; sourceTree = "<group>"; };
+		7FC03E341746FDA100949AA5 /* DHCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCalculator.m; sourceTree = "<group>"; };
+		7FC03E361746FF4200949AA5 /* DHPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPair.h; sourceTree = "<group>"; };
+		7FC03E371746FF4200949AA5 /* DHPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPair.m; sourceTree = "<group>"; };
+		7FDE3F5C174DAF9B00018315 /* ScreenShot1_4in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot1_4in.png; sourceTree = "<group>"; };
+		7FDE3F5D174DAF9B00018315 /* ScreenShot1_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot1_ipad.png; sourceTree = "<group>"; };
+		7FDE3F5E174DAF9B00018315 /* ScreenShot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot1.png; sourceTree = "<group>"; };
+		7FDE3F5F174DAF9B00018315 /* ScreenShot2_4in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot2_4in.png; sourceTree = "<group>"; };
+		7FDE3F60174DAF9B00018315 /* ScreenShot2_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot2_ipad.png; sourceTree = "<group>"; };
+		7FDE3F61174DAF9B00018315 /* ScreenShot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot2.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FC03E0A1746F8BC00949AA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC03E111746F8BC00949AA5 /* UIKit.framework in Frameworks */,
+				7FC03E131746F8BC00949AA5 /* Foundation.framework in Frameworks */,
+				7FC03E151746F8BC00949AA5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7FC03E041746F8BC00949AA5 = {
+			isa = PBXGroup;
+			children = (
+				7FC03E161746F8BC00949AA5 /* TellerCalculator */,
+				7FC03E0F1746F8BC00949AA5 /* Frameworks */,
+				7FC03E0E1746F8BC00949AA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7FC03E0E1746F8BC00949AA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7FC03E0D1746F8BC00949AA5 /* TellerCalculator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FC03E0F1746F8BC00949AA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FC03E101746F8BC00949AA5 /* UIKit.framework */,
+				7FC03E121746F8BC00949AA5 /* Foundation.framework */,
+				7FC03E141746F8BC00949AA5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FC03E161746F8BC00949AA5 /* TellerCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				7FC03E1F1746F8BC00949AA5 /* DHAppDelegate.h */,
+				7FC03E201746F8BC00949AA5 /* DHAppDelegate.m */,
+				7FC03E281746F8BC00949AA5 /* DHViewController.h */,
+				7FC03E291746F8BC00949AA5 /* DHViewController.m */,
+				7FC03E331746FDA100949AA5 /* DHCalculator.h */,
+				7FC03E341746FDA100949AA5 /* DHCalculator.m */,
+				7FC03E361746FF4200949AA5 /* DHPair.h */,
+				7FC03E371746FF4200949AA5 /* DHPair.m */,
+				7FC03E2B1746F8BC00949AA5 /* DHViewController.xib */,
+				7FC03E171746F8BC00949AA5 /* Supporting Files */,
+			);
+			path = TellerCalculator;
+			sourceTree = "<group>";
+		};
+		7FC03E171746F8BC00949AA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FDE3F5C174DAF9B00018315 /* ScreenShot1_4in.png */,
+				7FDE3F5D174DAF9B00018315 /* ScreenShot1_ipad.png */,
+				7FDE3F5E174DAF9B00018315 /* ScreenShot1.png */,
+				7FDE3F5F174DAF9B00018315 /* ScreenShot2_4in.png */,
+				7FDE3F60174DAF9B00018315 /* ScreenShot2_ipad.png */,
+				7FDE3F61174DAF9B00018315 /* ScreenShot2.png */,
+				7F044594174B2D29006FCC9F /* Icon-Small-50.png */,
+				7F044595174B2D29006FCC9F /* Icon-Small@2x.png */,
+				7F044596174B2D29006FCC9F /* Icon-Small.png */,
+				7F044597174B2D29006FCC9F /* iTunesArtwork.png */,
+				7F044598174B2D29006FCC9F /* Icon-72.png */,
+				7F09A8BC174723DF00572792 /* Icon@2x.png */,
+				7F09A8BA1747238E00572792 /* Icon.png */,
+				7F04459E174B2DBC006FCC9F /* readme.txt */,
+				7FC03E181746F8BC00949AA5 /* TellerCalculator-Info.plist */,
+				7FC03E191746F8BC00949AA5 /* InfoPlist.strings */,
+				7FC03E1C1746F8BC00949AA5 /* main.m */,
+				7FC03E1E1746F8BC00949AA5 /* TellerCalculator-Prefix.pch */,
+				7FC03E221746F8BC00949AA5 /* Default.png */,
+				7FC03E241746F8BC00949AA5 /* Default@2x.png */,
+				7FC03E261746F8BC00949AA5 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7FC03E0C1746F8BC00949AA5 /* TellerCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FC03E301746F8BC00949AA5 /* Build configuration list for PBXNativeTarget "TellerCalculator" */;
+			buildPhases = (
+				7FC03E091746F8BC00949AA5 /* Sources */,
+				7FC03E0A1746F8BC00949AA5 /* Frameworks */,
+				7FC03E0B1746F8BC00949AA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TellerCalculator;
+			productName = TellerCalculator;
+			productReference = 7FC03E0D1746F8BC00949AA5 /* TellerCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7FC03E051746F8BC00949AA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DH;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Derrick Ho";
+			};
+			buildConfigurationList = 7FC03E081746F8BC00949AA5 /* Build configuration list for PBXProject "TellerCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7FC03E041746F8BC00949AA5;
+			productRefGroup = 7FC03E0E1746F8BC00949AA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FC03E0C1746F8BC00949AA5 /* TellerCalculator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7FC03E0B1746F8BC00949AA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC03E1B1746F8BC00949AA5 /* InfoPlist.strings in Resources */,
+				7FC03E231746F8BC00949AA5 /* Default.png in Resources */,
+				7FC03E251746F8BC00949AA5 /* Default@2x.png in Resources */,
+				7FC03E271746F8BC00949AA5 /* Default-568h@2x.png in Resources */,
+				7FC03E2D1746F8BC00949AA5 /* DHViewController.xib in Resources */,
+				7F09A8BB1747238E00572792 /* Icon.png in Resources */,
+				7F09A8BD174723DF00572792 /* Icon@2x.png in Resources */,
+				7F044599174B2D29006FCC9F /* Icon-Small-50.png in Resources */,
+				7F04459A174B2D29006FCC9F /* Icon-Small@2x.png in Resources */,
+				7F04459B174B2D29006FCC9F /* Icon-Small.png in Resources */,
+				7F04459C174B2D29006FCC9F /* iTunesArtwork.png in Resources */,
+				7F04459D174B2D29006FCC9F /* Icon-72.png in Resources */,
+				7F04459F174B2DBC006FCC9F /* readme.txt in Resources */,
+				7FDE3F62174DAF9B00018315 /* ScreenShot1_4in.png in Resources */,
+				7FDE3F63174DAF9B00018315 /* ScreenShot1_ipad.png in Resources */,
+				7FDE3F64174DAF9B00018315 /* ScreenShot1.png in Resources */,
+				7FDE3F65174DAF9B00018315 /* ScreenShot2_4in.png in Resources */,
+				7FDE3F66174DAF9B00018315 /* ScreenShot2_ipad.png in Resources */,
+				7FDE3F67174DAF9B00018315 /* ScreenShot2.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7FC03E091746F8BC00949AA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC03E1D1746F8BC00949AA5 /* main.m in Sources */,
+				7FC03E211746F8BC00949AA5 /* DHAppDelegate.m in Sources */,
+				7FC03E2A1746F8BC00949AA5 /* DHViewController.m in Sources */,
+				7FC03E351746FDA100949AA5 /* DHCalculator.m in Sources */,
+				7FC03E381746FF4200949AA5 /* DHPair.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7FC03E191746F8BC00949AA5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FC03E1A1746F8BC00949AA5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7FC03E2B1746F8BC00949AA5 /* DHViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FC03E2C1746F8BC00949AA5 /* en */,
+			);
+			name = DHViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7FC03E2E1746F8BC00949AA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Derrick Ho (SX585CK9M9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "8C675ADB-61FB-4D2F-BDB2-FC798BC1C639";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7FC03E2F1746F8BC00949AA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Derrick Ho (SX585CK9M9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "8C675ADB-61FB-4D2F-BDB2-FC798BC1C639";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7FC03E311746F8BC00949AA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TellerCalculator/TellerCalculator-Prefix.pch";
+				INFOPLIST_FILE = "TellerCalculator/TellerCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7FC03E321746F8BC00949AA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TellerCalculator/TellerCalculator-Prefix.pch";
+				INFOPLIST_FILE = "TellerCalculator/TellerCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FC03E081746F8BC00949AA5 /* Build configuration list for PBXProject "TellerCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FC03E2E1746F8BC00949AA5 /* Debug */,
+				7FC03E2F1746F8BC00949AA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FC03E301746F8BC00949AA5 /* Build configuration list for PBXNativeTarget "TellerCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FC03E311746F8BC00949AA5 /* Debug */,
+				7FC03E321746F8BC00949AA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7FC03E051746F8BC00949AA5 /* Project object */;
+}
