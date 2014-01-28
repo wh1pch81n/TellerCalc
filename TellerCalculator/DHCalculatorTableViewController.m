@@ -8,6 +8,7 @@
 
 #import "DHCalculatorTableViewController.h"
 #import "DHHistoryModel.h"
+#import "DHCalculatorBasicViewController.h"
 
 @implementation DHCalculatorTableViewController
 
@@ -61,8 +62,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSLog(@"did Select: %d", indexPath.row);
-	[[self tabBarController] setSelectedIndex:1];
+	DHCalculatorBasicViewController *BVC = self.tabBarController.viewControllers[1];
+	DHHistoryModel *chosenModel = self.history[indexPath.row];
+	[BVC.displayTextField setText:chosenModel.historyString];
+	[self.tabBarController setSelectedIndex:1];
+	
 }
 
 - (IBAction)tappedHistoryCell:(id)sender {

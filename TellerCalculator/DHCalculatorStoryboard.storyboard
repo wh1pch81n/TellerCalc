@@ -302,6 +302,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Calculator" id="O7a-ZX-HRI"/>
                     <navigationItem key="navigationItem" id="dNN-yR-dr4"/>
+                    <connections>
+                        <outlet property="displayTextField" destination="Bhe-UW-dzN" id="2pa-kZ-sVH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5t-dW-KX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

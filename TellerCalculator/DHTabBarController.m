@@ -10,4 +10,9 @@
 
 @implementation DHTabBarController
 
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	[self setSelectedIndex:1];
+}
+
 @end

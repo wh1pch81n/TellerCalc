@@ -10,4 +10,6 @@
 
 @interface DHCalculatorBasicViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *displayTextField;
+
 @end
