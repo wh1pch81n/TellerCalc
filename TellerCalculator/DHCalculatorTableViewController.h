@@ -10,4 +10,6 @@
 
 @interface DHCalculatorTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSMutableArray *history;
+
 @end
