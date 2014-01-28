@@ -103,30 +103,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-UW-dzN" customClass="DHTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Equation" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-UW-dzN" customClass="DHTextField">
                                 <rect key="frame" x="20" y="20" width="280" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6w-Wg-9do">
-                                <rect key="frame" x="271" y="35" width="29" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="5tL-3j-eFm"/>
-                                    <constraint firstAttribute="width" constant="29" id="I8T-aO-g6T"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="&lt;x">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaE-Sz-Q57">
                                 <rect key="frame" x="236" y="80" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Clear">
+                                <state key="normal" title="back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -334,7 +322,6 @@
                             <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="Z32-C8-Gza" secondAttribute="width" id="HGX-u5-CBK"/>
                             <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="Z32-C8-Gza" secondAttribute="height" id="HiC-PJ-Zfa"/>
                             <constraint firstItem="N5N-Db-57U" firstAttribute="top" secondItem="Z32-C8-Gza" secondAttribute="bottom" constant="8" id="JT8-7P-sML"/>
-                            <constraint firstItem="N6w-Wg-9do" firstAttribute="centerY" secondItem="Bhe-UW-dzN" secondAttribute="centerY" id="Jke-o3-lJW"/>
                             <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="N5N-Db-57U" secondAttribute="width" id="LBh-EH-mlk"/>
                             <constraint firstAttribute="trailing" secondItem="Jx4-HD-Zq3" secondAttribute="trailing" constant="20" id="MDv-gV-uc5"/>
                             <constraint firstItem="3cu-ge-9SF" firstAttribute="top" secondItem="NPA-yD-4LA" secondAttribute="bottom" constant="8" id="MYo-Im-ASS"/>
@@ -350,7 +337,6 @@
                             <constraint firstItem="I0B-Tw-ond" firstAttribute="leading" secondItem="3cu-ge-9SF" secondAttribute="trailing" constant="8" id="RcT-cH-Uig"/>
                             <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="6vJ-01-ylj" secondAttribute="height" id="U7e-Ch-apD"/>
                             <constraint firstItem="Bhe-UW-dzN" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="VFg-Pe-5zN"/>
-                            <constraint firstItem="N6w-Wg-9do" firstAttribute="centerX" secondItem="Bhe-UW-dzN" secondAttribute="centerX" constant="125.5" id="WRe-PI-HoX"/>
                             <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="4Qu-RB-NIa" secondAttribute="height" id="Wbv-Wr-cUW"/>
                             <constraint firstItem="NPA-yD-4LA" firstAttribute="leading" secondItem="dgk-Pn-Z02" secondAttribute="trailing" constant="8" id="Wmq-v9-jV6"/>
                             <constraint firstItem="Bhe-UW-dzN" firstAttribute="top" secondItem="Qaf-sy-DkE" secondAttribute="top" constant="20" id="YFs-lL-24R"/>
@@ -361,7 +347,6 @@
                             <constraint firstAttribute="trailing" secondItem="Bhe-UW-dzN" secondAttribute="trailing" constant="20" id="blo-eZ-rNi"/>
                             <constraint firstItem="1SC-4F-FWG" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="c90-8j-yVz"/>
                             <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="6vJ-01-ylj" secondAttribute="width" id="cby-30-00S"/>
-                            <constraint firstItem="N6w-Wg-9do" firstAttribute="trailing" secondItem="Bhe-UW-dzN" secondAttribute="trailing" id="d0G-TR-XlU"/>
                             <constraint firstItem="6vJ-01-ylj" firstAttribute="top" secondItem="Qaf-sy-DkE" secondAttribute="top" constant="152" id="dPJ-kL-aua"/>
                             <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="Jkb-BQ-fJY" secondAttribute="width" id="dZz-19-OxP"/>
                             <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="Ymt-Sv-K7C" secondAttribute="height" id="f95-jX-Eho"/>
@@ -391,7 +376,6 @@
                             <constraint firstItem="aMC-l4-1eF" firstAttribute="top" secondItem="3cu-ge-9SF" secondAttribute="bottom" constant="8" id="soj-Fh-CJi"/>
                             <constraint firstItem="fXZ-5C-T4L" firstAttribute="leading" secondItem="Z32-C8-Gza" secondAttribute="trailing" constant="8" id="sse-1z-GBF"/>
                             <constraint firstItem="f7z-yl-5JR" firstAttribute="top" secondItem="AbS-Uf-P25" secondAttribute="bottom" constant="8" id="t2H-7B-2Oj"/>
-                            <constraint firstItem="N6w-Wg-9do" firstAttribute="leading" secondItem="Bhe-UW-dzN" secondAttribute="leading" constant="251" id="tJE-yy-pTV"/>
                             <constraint firstAttribute="bottom" secondItem="4Qu-RB-NIa" secondAttribute="bottom" constant="64" id="tZm-Fq-fDc"/>
                             <constraint firstAttribute="bottom" secondItem="N5N-Db-57U" secondAttribute="bottom" constant="64" id="vnH-xE-aKs"/>
                             <constraint firstItem="moU-nb-vcZ" firstAttribute="top" secondItem="Ymt-Sv-K7C" secondAttribute="bottom" constant="8" id="voM-T6-fF8"/>
