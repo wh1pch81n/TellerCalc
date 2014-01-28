@@ -15,6 +15,10 @@
 		7F04459F174B2DBC006FCC9F /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F04459E174B2DBC006FCC9F /* readme.txt */; };
 		7F09A8BB1747238E00572792 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F09A8BA1747238E00572792 /* Icon.png */; };
 		7F09A8BD174723DF00572792 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F09A8BC174723DF00572792 /* Icon@2x.png */; };
+		7F46F0661897466D000EE5E6 /* DHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46F0651897466D000EE5E6 /* DHTabBarController.m */; };
+		7F46F069189746CB000EE5E6 /* DHCalculatorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46F068189746CB000EE5E6 /* DHCalculatorTableViewController.m */; };
+		7F46F06C189746FB000EE5E6 /* DHCalculatorBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46F06B189746FB000EE5E6 /* DHCalculatorBasicViewController.m */; };
+		7F46F06F1897472D000EE5E6 /* DHCalculatorAdvancedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46F06E1897472D000EE5E6 /* DHCalculatorAdvancedViewController.m */; };
 		7F9674221893349800144A91 /* DHCalculatorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9674211893349800144A91 /* DHCalculatorStoryboard.storyboard */; };
 		7FC03E111746F8BC00949AA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC03E101746F8BC00949AA5 /* UIKit.framework */; };
 		7FC03E131746F8BC00949AA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC03E121746F8BC00949AA5 /* Foundation.framework */; };
@@ -46,6 +50,14 @@
 		7F04459E174B2DBC006FCC9F /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		7F09A8BA1747238E00572792 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		7F09A8BC174723DF00572792 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		7F46F0641897466D000EE5E6 /* DHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabBarController.h; sourceTree = "<group>"; };
+		7F46F0651897466D000EE5E6 /* DHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabBarController.m; sourceTree = "<group>"; };
+		7F46F067189746CB000EE5E6 /* DHCalculatorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCalculatorTableViewController.h; sourceTree = "<group>"; };
+		7F46F068189746CB000EE5E6 /* DHCalculatorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCalculatorTableViewController.m; sourceTree = "<group>"; };
+		7F46F06A189746FB000EE5E6 /* DHCalculatorBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCalculatorBasicViewController.h; sourceTree = "<group>"; };
+		7F46F06B189746FB000EE5E6 /* DHCalculatorBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCalculatorBasicViewController.m; sourceTree = "<group>"; };
+		7F46F06D1897472D000EE5E6 /* DHCalculatorAdvancedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCalculatorAdvancedViewController.h; sourceTree = "<group>"; };
+		7F46F06E1897472D000EE5E6 /* DHCalculatorAdvancedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCalculatorAdvancedViewController.m; sourceTree = "<group>"; };
 		7F9674211893349800144A91 /* DHCalculatorStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DHCalculatorStoryboard.storyboard; sourceTree = "<group>"; };
 		7FC03E0D1746F8BC00949AA5 /* TellerCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TellerCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC03E101746F8BC00949AA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -89,6 +101,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F46F07018974743000EE5E6 /* Calc Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7F9674211893349800144A91 /* DHCalculatorStoryboard.storyboard */,
+				7F46F06D1897472D000EE5E6 /* DHCalculatorAdvancedViewController.h */,
+				7F46F06E1897472D000EE5E6 /* DHCalculatorAdvancedViewController.m */,
+				7F46F06A189746FB000EE5E6 /* DHCalculatorBasicViewController.h */,
+				7F46F06B189746FB000EE5E6 /* DHCalculatorBasicViewController.m */,
+				7F46F067189746CB000EE5E6 /* DHCalculatorTableViewController.h */,
+				7F46F068189746CB000EE5E6 /* DHCalculatorTableViewController.m */,
+				7F46F0641897466D000EE5E6 /* DHTabBarController.h */,
+				7F46F0651897466D000EE5E6 /* DHTabBarController.m */,
+			);
+			name = "Calc Storyboards";
+			sourceTree = "<group>";
+		};
 		7FC03E041746F8BC00949AA5 = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +147,7 @@
 		7FC03E161746F8BC00949AA5 /* TellerCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				7F9674211893349800144A91 /* DHCalculatorStoryboard.storyboard */,
+				7F46F07018974743000EE5E6 /* Calc Storyboards */,
 				7FC03E1F1746F8BC00949AA5 /* DHAppDelegate.h */,
 				7FC03E201746F8BC00949AA5 /* DHAppDelegate.m */,
 				7FC03E281746F8BC00949AA5 /* DHViewController.h */,
@@ -245,10 +273,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FC03E1D1746F8BC00949AA5 /* main.m in Sources */,
+				7F46F06F1897472D000EE5E6 /* DHCalculatorAdvancedViewController.m in Sources */,
+				7F46F06C189746FB000EE5E6 /* DHCalculatorBasicViewController.m in Sources */,
+				7F46F069189746CB000EE5E6 /* DHCalculatorTableViewController.m in Sources */,
 				7FC03E211746F8BC00949AA5 /* DHAppDelegate.m in Sources */,
 				7FC03E2A1746F8BC00949AA5 /* DHViewController.m in Sources */,
 				7FC03E351746FDA100949AA5 /* DHCalculator.m in Sources */,
 				7FC03E381746FF4200949AA5 /* DHPair.m in Sources */,
+				7F46F0661897466D000EE5E6 /* DHTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
