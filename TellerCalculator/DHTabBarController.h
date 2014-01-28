@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class DHHistoryModel;
+
 @interface DHTabBarController : UITabBarController
 
-@property (strong, atomic) NSString *displayText;
+@property (strong, atomic) DHHistoryModel *historyModel;
 
 - (void)setBasicCalculatorDisplay:(NSString *)text;
 

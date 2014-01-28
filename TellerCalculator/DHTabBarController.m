@@ -14,7 +14,8 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[self setDisplayText:@""];
+	[self setHistoryModel:[DHHistoryModel new]];
+	[self.historyModel setHistoryString:@""];
 	[self setSelectedIndex:1];
 }
 

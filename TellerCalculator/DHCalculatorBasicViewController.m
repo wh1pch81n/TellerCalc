@@ -8,6 +8,7 @@
 
 #import "DHCalculatorBasicViewController.h"
 #import "DHTabBarController.h"
+#import "DHHistoryModel.h"
 
 @implementation DHCalculatorBasicViewController
 
@@ -20,7 +21,7 @@
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 	DHTabBarController *tabBarController = (DHTabBarController *)self.tabBarController;
-	[self.displayTextField setText:tabBarController.displayText];
+	[self.displayTextField setText:tabBarController.historyModel.historyString];
 }
 
 @end
