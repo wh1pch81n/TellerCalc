@@ -13,14 +13,13 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
+	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"1+2"]];
+	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"1+2x3"]];
+	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"(1+2)x3"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"1+2"]];
-	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"1+2x3"]];
-	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"(1+2)x3"]];
 }
 
 - (void)appendHistory:(id)sender object:(DHHistoryModel *)object {
@@ -60,4 +59,24 @@
 		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 	}
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	NSLog(@"did Select: %d", indexPath.row);
+	[[self tabBarController] setSelectedIndex:1];
+}
+
+- (IBAction)tappedHistoryCell:(id)sender {
+	
+}
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	
+}
+
+
+
+
+
 @end
