@@ -113,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				7F9674211893349800144A91 /* DHCalculatorStoryboard.storyboard */,
+				7F4EEC5E18984C6C00400C4E /* DHBasicKeyboardView.xib */,
 				7F46F07118974F01000EE5E6 /* DHHistoryModel.h */,
 				7F46F07218974F01000EE5E6 /* DHHistoryModel.m */,
 				7F46F06D1897472D000EE5E6 /* DHCalculatorAdvancedViewController.h */,
@@ -170,7 +171,6 @@
 				7FC03E371746FF4200949AA5 /* DHPair.m */,
 				7FC03E2B1746F8BC00949AA5 /* DHViewController.xib */,
 				7FC03E171746F8BC00949AA5 /* Supporting Files */,
-				7F4EEC5E18984C6C00400C4E /* DHBasicKeyboardView.xib */,
 			);
 			path = TellerCalculator;
 			sourceTree = "<group>";
