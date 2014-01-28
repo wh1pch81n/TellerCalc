@@ -10,4 +10,8 @@
 
 @interface DHTabBarController : UITabBarController
 
+- (void)setBasicCalculatorDisplay:(NSString *)text;
+
+- (void)segueToBasicCalculatorViewController;
+
 @end
