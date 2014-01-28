@@ -14,6 +14,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	[self setDisplayText:@""];
 	[self setSelectedIndex:1];
 }
 
