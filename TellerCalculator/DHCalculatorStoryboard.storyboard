@@ -103,17 +103,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-UW-dzN" customClass="DHTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-UW-dzN" customClass="DHTextField">
                                 <rect key="frame" x="20" y="20" width="280" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="Xxp-CE-0zb"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="ZlT-26-Knv"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6w-Wg-9do">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6w-Wg-9do">
                                 <rect key="frame" x="271" y="35" width="29" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -125,106 +121,7 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgk-Pn-Z02">
-                                <rect key="frame" x="20" y="224" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="7">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPA-yD-4LA">
-                                <rect key="frame" x="92" y="224" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="8">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moU-nb-vcZ">
-                                <rect key="frame" x="164" y="224" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="9">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSA-od-3yn">
-                                <rect key="frame" x="20" y="296" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="4">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cu-ge-9SF">
-                                <rect key="frame" x="92" y="296" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="5">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0B-Tw-ond">
-                                <rect key="frame" x="164" y="296" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="6">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkb-BQ-fJY">
-                                <rect key="frame" x="20" y="368" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qu-RB-NIa">
-                                <rect key="frame" x="20" y="440" width="136" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="0">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-Db-57U">
-                                <rect key="frame" x="164" y="440" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title=".">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SC-4F-FWG">
-                                <rect key="frame" x="20" y="152" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="(">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-01-ylj">
-                                <rect key="frame" x="92" y="152" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title=")">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaE-Sz-Q57">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaE-Sz-Q57">
                                 <rect key="frame" x="236" y="80" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -233,16 +130,25 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbS-Uf-P25">
-                                <rect key="frame" x="236" y="152" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SC-4F-FWG">
+                                <rect key="frame" x="20" y="152" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="÷">
+                                <state key="normal" title="(">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymt-Sv-K7C">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-01-ylj">
+                                <rect key="frame" x="92" y="152" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title=")">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymt-Sv-K7C">
                                 <rect key="frame" x="164" y="152" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -251,16 +157,43 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXZ-5C-T4L">
-                                <rect key="frame" x="236" y="368" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbS-Uf-P25">
+                                <rect key="frame" x="236" y="152" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="-">
+                                <state key="normal" title="÷">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-yl-5JR">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgk-Pn-Z02">
+                                <rect key="frame" x="20" y="224" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="7">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPA-yD-4LA">
+                                <rect key="frame" x="92" y="224" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="8">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moU-nb-vcZ">
+                                <rect key="frame" x="164" y="224" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="9">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-yl-5JR">
                                 <rect key="frame" x="236" y="224" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -269,25 +202,34 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMC-l4-1eF">
-                                <rect key="frame" x="92" y="368" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSA-od-3yn">
+                                <rect key="frame" x="20" y="296" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="2">
+                                <state key="normal" title="4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-C8-Gza">
-                                <rect key="frame" x="164" y="368" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cu-ge-9SF">
+                                <rect key="frame" x="92" y="296" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="3">
+                                <state key="normal" title="5">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQ5-VO-ZCz">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0B-Tw-ond">
+                                <rect key="frame" x="164" y="296" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQ5-VO-ZCz">
                                 <rect key="frame" x="236" y="296" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -296,7 +238,61 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx4-HD-Zq3">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkb-BQ-fJY">
+                                <rect key="frame" x="20" y="368" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMC-l4-1eF">
+                                <rect key="frame" x="92" y="368" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-C8-Gza">
+                                <rect key="frame" x="164" y="368" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXZ-5C-T4L">
+                                <rect key="frame" x="236" y="368" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qu-RB-NIa">
+                                <rect key="frame" x="20" y="440" width="136" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="0">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-Db-57U">
+                                <rect key="frame" x="164" y="440" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title=".">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx4-HD-Zq3">
                                 <rect key="frame" x="236" y="440" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -307,100 +303,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="3cu-ge-9SF" firstAttribute="top" secondItem="NPA-yD-4LA" secondAttribute="bottom" constant="8" id="0rQ-lT-6b2"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="I0B-Tw-ond" secondAttribute="width" id="1Tw-wb-yuE"/>
-                            <constraint firstItem="NPA-yD-4LA" firstAttribute="leading" secondItem="dgk-Pn-Z02" secondAttribute="trailing" constant="8" id="1a9-QN-Xq0"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="3cu-ge-9SF" secondAttribute="width" id="21w-cO-cL4"/>
-                            <constraint firstAttribute="bottom" secondItem="Jx4-HD-Zq3" secondAttribute="bottom" constant="64" id="2ru-CZ-PDs"/>
-                            <constraint firstItem="dgk-Pn-Z02" firstAttribute="top" secondItem="1SC-4F-FWG" secondAttribute="bottom" constant="8" id="4Ol-Y6-wJK"/>
-                            <constraint firstItem="Jkb-BQ-fJY" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="58T-8l-UNu"/>
-                            <constraint firstItem="Jx4-HD-Zq3" firstAttribute="top" secondItem="fXZ-5C-T4L" secondAttribute="bottom" constant="8" id="5Js-c8-MOP"/>
-                            <constraint firstAttribute="trailing" secondItem="qQ5-VO-ZCz" secondAttribute="trailing" constant="20" id="5Sl-jh-Ime"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="aMC-l4-1eF" secondAttribute="width" id="5gA-yd-FkT"/>
-                            <constraint firstItem="Z32-C8-Gza" firstAttribute="top" secondItem="I0B-Tw-ond" secondAttribute="bottom" constant="8" id="5z4-dr-6Ha"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="Z32-C8-Gza" secondAttribute="height" id="6F6-hP-PQX"/>
-                            <constraint firstItem="4Qu-RB-NIa" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="74t-ET-vK7"/>
-                            <constraint firstItem="fXZ-5C-T4L" firstAttribute="top" secondItem="qQ5-VO-ZCz" secondAttribute="bottom" constant="8" id="8CS-La-r14"/>
-                            <constraint firstItem="hSA-od-3yn" firstAttribute="top" secondItem="dgk-Pn-Z02" secondAttribute="bottom" constant="8" id="8kz-Ke-fWO"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="top" secondItem="f7z-yl-5JR" secondAttribute="bottom" constant="8" id="9Cj-Pu-P2o"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="AbS-Uf-P25" secondAttribute="height" id="9eF-mU-9Tw"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="1SC-4F-FWG" secondAttribute="height" id="ARq-oT-v7c"/>
-                            <constraint firstItem="3cu-ge-9SF" firstAttribute="leading" secondItem="hSA-od-3yn" secondAttribute="trailing" constant="8" id="AjH-9z-fpm"/>
-                            <constraint firstItem="I0B-Tw-ond" firstAttribute="leading" secondItem="3cu-ge-9SF" secondAttribute="trailing" constant="8" id="CGX-LN-Cz3"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="N5N-Db-57U" secondAttribute="width" id="D52-RD-BHy"/>
-                            <constraint firstAttribute="bottom" secondItem="N5N-Db-57U" secondAttribute="bottom" constant="64" id="DJz-76-HVm"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="6vJ-01-ylj" secondAttribute="width" id="E04-hF-9NU"/>
-                            <constraint firstAttribute="trailing" secondItem="f7z-yl-5JR" secondAttribute="trailing" constant="20" id="ERa-8F-nyc"/>
-                            <constraint firstItem="aMC-l4-1eF" firstAttribute="leading" secondItem="Jkb-BQ-fJY" secondAttribute="trailing" constant="8" id="Fxg-Gt-1Dh"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="Jkb-BQ-fJY" secondAttribute="width" id="G7p-zj-lJ8"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="Jkb-BQ-fJY" secondAttribute="height" id="H9N-QK-iaG"/>
-                            <constraint firstAttribute="trailing" secondItem="Jx4-HD-Zq3" secondAttribute="trailing" constant="20" id="J2q-Ww-hiZ"/>
-                            <constraint firstItem="f7z-yl-5JR" firstAttribute="top" secondItem="AbS-Uf-P25" secondAttribute="bottom" constant="8" id="K4q-zd-1w9"/>
-                            <constraint firstItem="Bhe-UW-dzN" firstAttribute="top" secondItem="82H-rz-6Wq" secondAttribute="bottom" constant="20" id="Kg8-zY-3WW"/>
-                            <constraint firstItem="Ymt-Sv-K7C" firstAttribute="top" secondItem="Bhe-UW-dzN" secondAttribute="bottom" constant="80" id="M1F-tn-IfG"/>
-                            <constraint firstItem="aMC-l4-1eF" firstAttribute="top" secondItem="3cu-ge-9SF" secondAttribute="bottom" constant="8" id="MFf-Ag-Ozx"/>
-                            <constraint firstItem="1SC-4F-FWG" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="O4Z-hr-YPz"/>
-                            <constraint firstAttribute="trailing" secondItem="fXZ-5C-T4L" secondAttribute="trailing" constant="20" id="Ofw-rg-XPL"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="Ymt-Sv-K7C" secondAttribute="width" id="Ojc-fn-NVG"/>
-                            <constraint firstItem="NPA-yD-4LA" firstAttribute="top" secondItem="6vJ-01-ylj" secondAttribute="bottom" constant="8" id="Q1j-CY-gQX"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="aMC-l4-1eF" secondAttribute="height" id="Qoe-C3-07P"/>
-                            <constraint firstItem="Bhe-UW-dzN" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="TfR-Bw-j3y"/>
-                            <constraint firstItem="I0B-Tw-ond" firstAttribute="top" secondItem="moU-nb-vcZ" secondAttribute="bottom" constant="8" id="TqJ-35-Mrh"/>
-                            <constraint firstItem="fXZ-5C-T4L" firstAttribute="leading" secondItem="Z32-C8-Gza" secondAttribute="trailing" constant="8" id="UjD-Km-tbJ"/>
-                            <constraint firstItem="OaE-Sz-Q57" firstAttribute="top" secondItem="Bhe-UW-dzN" secondAttribute="bottom" constant="8" id="UnU-kb-mIp"/>
-                            <constraint firstAttribute="trailing" secondItem="Bhe-UW-dzN" secondAttribute="trailing" constant="20" id="VOf-Rl-ZTh"/>
-                            <constraint firstItem="4Qu-RB-NIa" firstAttribute="top" secondItem="Jkb-BQ-fJY" secondAttribute="bottom" constant="8" id="WdT-WT-kEG"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="hSA-od-3yn" secondAttribute="width" id="XMa-8Q-KbP"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="leading" secondItem="4Qu-RB-NIa" secondAttribute="trailing" constant="8" id="Y11-Me-2iR"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="dgk-Pn-Z02" secondAttribute="width" id="aUX-1z-FQq"/>
-                            <constraint firstItem="Jkb-BQ-fJY" firstAttribute="top" secondItem="hSA-od-3yn" secondAttribute="bottom" constant="8" id="b8Y-Rf-lb1"/>
-                            <constraint firstAttribute="centerX" secondItem="Bhe-UW-dzN" secondAttribute="centerX" id="btn-1h-nl5"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="AbS-Uf-P25" secondAttribute="width" id="bxi-rk-Ora"/>
-                            <constraint firstAttribute="trailing" secondItem="OaE-Sz-Q57" secondAttribute="trailing" constant="20" id="bzo-gM-WrL"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="Jx4-HD-Zq3" secondAttribute="width" id="cIb-qt-ObD"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="I0B-Tw-ond" secondAttribute="height" id="cJa-87-pWA"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="6vJ-01-ylj" secondAttribute="height" id="cMt-fQ-bEt"/>
-                            <constraint firstItem="dgk-Pn-Z02" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="cXz-ht-ov6"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="f7z-yl-5JR" secondAttribute="width" id="cYa-A1-Zit"/>
-                            <constraint firstItem="moU-nb-vcZ" firstAttribute="leading" secondItem="NPA-yD-4LA" secondAttribute="trailing" constant="8" id="da3-FR-7ji"/>
-                            <constraint firstItem="N6w-Wg-9do" firstAttribute="centerY" secondItem="Bhe-UW-dzN" secondAttribute="centerY" id="di8-g4-BmS"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="NPA-yD-4LA" secondAttribute="width" id="el5-Kh-11b"/>
-                            <constraint firstItem="Jx4-HD-Zq3" firstAttribute="leading" secondItem="N5N-Db-57U" secondAttribute="trailing" constant="8" id="f6t-fp-EMe"/>
-                            <constraint firstItem="6vJ-01-ylj" firstAttribute="top" secondItem="Bhe-UW-dzN" secondAttribute="bottom" constant="80" id="fb4-lc-Em4"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="fXZ-5C-T4L" secondAttribute="height" id="fcz-kB-m2n"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="NPA-yD-4LA" secondAttribute="height" id="ftL-Kd-XA7"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="1SC-4F-FWG" secondAttribute="width" id="gNQ-wV-Ben"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="dgk-Pn-Z02" secondAttribute="height" id="gwA-VW-IVo"/>
-                            <constraint firstItem="Ymt-Sv-K7C" firstAttribute="leading" secondItem="6vJ-01-ylj" secondAttribute="trailing" constant="8" id="hA7-Vt-CXi"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="OaE-Sz-Q57" secondAttribute="height" id="hdC-aR-n4R"/>
-                            <constraint firstItem="f7z-yl-5JR" firstAttribute="leading" secondItem="moU-nb-vcZ" secondAttribute="trailing" constant="8" id="iLG-hr-T20"/>
-                            <constraint firstItem="Z32-C8-Gza" firstAttribute="leading" secondItem="aMC-l4-1eF" secondAttribute="trailing" constant="8" id="ikw-Qd-6zE"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="Jx4-HD-Zq3" secondAttribute="height" id="itN-kl-9Vr"/>
-                            <constraint firstAttribute="trailing" secondItem="AbS-Uf-P25" secondAttribute="trailing" constant="20" id="jji-rc-t6C"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="f7z-yl-5JR" secondAttribute="height" id="kiV-1u-OAy"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="moU-nb-vcZ" secondAttribute="width" id="luz-zF-zKt"/>
-                            <constraint firstItem="hSA-od-3yn" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="mkW-FZ-cYJ"/>
-                            <constraint firstItem="1SC-4F-FWG" firstAttribute="top" secondItem="Bhe-UW-dzN" secondAttribute="bottom" constant="80" id="my7-cy-ADd"/>
-                            <constraint firstItem="4Qu-RB-NIa" firstAttribute="top" secondItem="aMC-l4-1eF" secondAttribute="bottom" constant="8" id="ncb-hP-HuQ"/>
-                            <constraint firstItem="N6w-Wg-9do" firstAttribute="trailing" secondItem="Bhe-UW-dzN" secondAttribute="trailing" id="oGv-AN-Mpd"/>
-                            <constraint firstItem="AbS-Uf-P25" firstAttribute="leading" secondItem="Ymt-Sv-K7C" secondAttribute="trailing" constant="8" id="pXI-Cy-LGq"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="3cu-ge-9SF" secondAttribute="height" id="pkn-4x-pjh"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="OaE-Sz-Q57" secondAttribute="width" id="q7Q-fg-3r3"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="leading" secondItem="I0B-Tw-ond" secondAttribute="trailing" constant="8" id="qEs-CB-ILw"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="qQ5-VO-ZCz" secondAttribute="height" id="qG5-F1-Kdc"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="moU-nb-vcZ" secondAttribute="height" id="qez-25-95Z"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="Z32-C8-Gza" secondAttribute="width" id="rNK-F7-FLg"/>
-                            <constraint firstItem="AbS-Uf-P25" firstAttribute="top" secondItem="OaE-Sz-Q57" secondAttribute="bottom" constant="8" id="s6h-O8-rSY"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="top" secondItem="Z32-C8-Gza" secondAttribute="bottom" constant="8" id="sUf-ec-a4A"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="4Qu-RB-NIa" secondAttribute="height" id="tnR-Ng-dRA"/>
-                            <constraint firstItem="qQ5-VO-ZCz" firstAttribute="width" secondItem="fXZ-5C-T4L" secondAttribute="width" id="vj6-Lp-iFy"/>
-                            <constraint firstItem="moU-nb-vcZ" firstAttribute="top" secondItem="Ymt-Sv-K7C" secondAttribute="bottom" constant="8" id="wcu-2C-MPB"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="hSA-od-3yn" secondAttribute="height" id="yWh-kc-A7C"/>
-                            <constraint firstAttribute="bottom" secondItem="4Qu-RB-NIa" secondAttribute="bottom" constant="64" id="z9c-cV-5Vi"/>
-                            <constraint firstItem="N5N-Db-57U" firstAttribute="height" secondItem="Ymt-Sv-K7C" secondAttribute="height" id="zP6-pc-j0G"/>
-                            <constraint firstItem="6vJ-01-ylj" firstAttribute="leading" secondItem="1SC-4F-FWG" secondAttribute="trailing" constant="8" id="zth-R3-Sme"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calculator" id="O7a-ZX-HRI"/>
                     <navigationItem key="navigationItem" id="dNN-yR-dr4"/>
