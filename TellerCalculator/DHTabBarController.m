@@ -22,9 +22,10 @@
 	self.selectedIndex = 1;
 }
 
-- (void)modifyHistoryModelWithKey:(NSString *)key {
+- (void)modifyHistoryModelWithKey:(NSString *)key atRange:(NSRange)range{
 	if ([key isEqualToString:@"backspace"]) {
-		[self.historyModel spliceHistoryStringAtIndex:self.historyModel.historyString.length-1 deleteAmount:1 insert:nil];
+		NSLog(@"%d %d", range.location, range.length);
+		[self.historyModel spliceHistoryStringAtIndex:range.location deleteAmount:range.length insert:nil];
 	}
 }
 

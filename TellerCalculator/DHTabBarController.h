@@ -16,6 +16,6 @@
 
 - (void)segueToBasicCalculatorViewController;
 
-- (void)modifyHistoryModelWithKey:(NSString *)key;
+- (void)modifyHistoryModelWithKey:(NSString *)key atRange:(NSRange)range;
 
 @end

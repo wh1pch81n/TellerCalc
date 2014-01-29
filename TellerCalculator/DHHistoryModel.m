@@ -26,11 +26,10 @@
 }
 
 - (void)spliceHistoryStringAtIndex:(NSUInteger)index deleteAmount:(NSUInteger)delAmt insert:(NSString *)text {
-	//handel deletions
-	self.historyString = [self.historyString stringByReplacingCharactersInRange:NSMakeRange(index, delAmt) withString:@""];
-	
-	//handel insertions
-	self.historyString = [self.historyString stringByReplacingCharactersInRange:NSMakeRange(index, 0) withString:text?:@""];
+	if (index > self.historyString.length || index == 0) {
+		return;
+	}
+	self.historyString = [self.historyString stringByReplacingCharactersInRange:NSMakeRange(index, delAmt) withString:text?:@""];
 }
 
 @end
