@@ -22,6 +22,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
+	[self.tableView reloadData];
 }
 
 - (void)appendHistory:(id)sender object:(DHHistoryModel *)object {
@@ -64,7 +65,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	DHTabBarController *tabBarController = (DHTabBarController *)self.tabBarController;
-	[tabBarController setHistoryModel:self.history[indexPath.row]];
+	[tabBarController setHistoryModel:[self.history[indexPath.row] duplicate]];
 	[tabBarController segueToBasicCalculatorViewController];
 }
 

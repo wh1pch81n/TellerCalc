@@ -16,4 +16,8 @@
 
 - (id)init;
 
+- (DHHistoryModel *)duplicate;
+
+- (void)spliceHistoryStringAtIndex:(NSUInteger)index deleteAmount:(NSUInteger)delAmt insert:(NSString *)text;
+
 @end

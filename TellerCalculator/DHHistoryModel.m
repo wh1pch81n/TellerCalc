@@ -21,4 +21,16 @@
 	return [self initWithString:@""];
 }
 
+- (DHHistoryModel *)duplicate {
+	return [self initWithString:self.historyString];
+}
+
+- (void)spliceHistoryStringAtIndex:(NSUInteger)index deleteAmount:(NSUInteger)delAmt insert:(NSString *)text {
+	//handel deletions
+	self.historyString = [self.historyString stringByReplacingCharactersInRange:NSMakeRange(index, delAmt) withString:@""];
+	
+	//handel insertions
+	self.historyString = [self.historyString stringByReplacingCharactersInRange:NSMakeRange(index, 0) withString:text?:@""];
+}
+
 @end

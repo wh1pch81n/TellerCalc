@@ -14,8 +14,8 @@
 
 @property (strong, atomic) DHHistoryModel *historyModel;
 
-- (void)setBasicCalculatorDisplay:(NSString *)text;
-
 - (void)segueToBasicCalculatorViewController;
+
+- (void)modifyHistoryModelWithKey:(NSString *)key;
 
 @end

@@ -14,6 +14,8 @@
 
 @property (strong, atomic)UIView *customKeyboardView;
 
+@property (weak, atomic)DHTabBarController *TBC;
+
 @end
 
 @implementation DHCalculatorBasicViewController
@@ -21,10 +23,11 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	self.TBC = (DHTabBarController *)self.tabBarController;
 	self.displayTextField.inputView = [self initializeCustomKeyboardView];
 	
 	//TODO add KVO here so that when the tabbar's value changes it can change the display's text right away.  For now update the display by hand in the viewdidAppear
-	[(DHTabBarController *)self.tabBarController addObserver:self forKeyPath:@"historyModel" options:NSKeyValueObservingOptionNew context:nil];
+	[self.TBC addObserver:self forKeyPath:@"historyModel" options:NSKeyValueObservingOptionNew context:nil];
 
 }
 
@@ -48,6 +51,10 @@
 		DHHistoryModel *HM = (DHHistoryModel *)[object valueForKey:@"historyModel"];
 		[self.displayTextField setText:HM.historyString];
 	}
+}
+
+- (IBAction)tappedBackspace:(id)sender {
+	[self.TBC modifyHistoryModelWithKey:@"backspace"];
 }
 
 @end

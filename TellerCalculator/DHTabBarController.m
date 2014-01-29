@@ -18,13 +18,14 @@
 	[self setSelectedIndex:1];
 }
 
-- (void)setBasicCalculatorDisplay:(NSString *)text {
-	DHCalculatorBasicViewController *BVC = self.viewControllers[1];
-	BVC.displayTextField.text = text;
-}
-
 - (void)segueToBasicCalculatorViewController {
 	self.selectedIndex = 1;
+}
+
+- (void)modifyHistoryModelWithKey:(NSString *)key {
+	if ([key isEqualToString:@"backspace"]) {
+		[self.historyModel spliceHistoryStringAtIndex:self.historyModel.historyString.length-1 deleteAmount:1 insert:nil];
+	}
 }
 
 @end
