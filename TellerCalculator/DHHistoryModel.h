@@ -11,6 +11,9 @@
 @interface DHHistoryModel : NSObject
 
 @property (strong, atomic) NSString *historyString;
+
 - (id)initWithString:(NSString *)str;
+
+- (id)init;
 
 @end

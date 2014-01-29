@@ -24,12 +24,12 @@
 	self.displayTextField.inputView = [self initializeCustomKeyboardView];
 	
 	//TODO add KVO here so that when the tabbar's value changes it can change the display's text right away.  For now update the display by hand in the viewdidAppear
+	[(DHTabBarController *)self.tabBarController addObserver:self forKeyPath:@"historyModel" options:NSKeyValueObservingOptionNew context:nil];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	DHTabBarController *tabBarController = (DHTabBarController *)self.tabBarController;
-	[self.displayTextField setText:tabBarController.historyModel.historyString];
 	[self.displayTextField becomeFirstResponder];
 }
 
@@ -41,6 +41,13 @@
 - (UIView *)initializeCustomKeyboardView {
 	self.customKeyboardView = [[[NSBundle mainBundle] loadNibNamed:@"DHBasicKeyboardView" owner:self options:nil] lastObject];
 	return self.customKeyboardView;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+	if ([keyPath isEqualToString:@"historyModel"]) {
+		DHHistoryModel *HM = (DHHistoryModel *)[object valueForKey:@"historyModel"];
+		[self.displayTextField setText:HM.historyString];
+	}
 }
 
 @end

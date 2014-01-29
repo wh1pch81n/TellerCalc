@@ -17,4 +17,8 @@
 	return self;
 }
 
+- (id)init {
+	return [self initWithString:@""];
+}
+
 @end
