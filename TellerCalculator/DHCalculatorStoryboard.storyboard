@@ -408,6 +408,7 @@
                             <constraint firstAttribute="trailing" secondItem="IAg-JL-Fe1" secondAttribute="trailing" constant="20" id="SbP-HO-8Ly"/>
                             <constraint firstItem="IAg-JL-Fe1" firstAttribute="leading" secondItem="9hD-In-4bl" secondAttribute="leading" constant="20" id="XSt-dW-t4X"/>
                             <constraint firstItem="4MN-aE-1C9" firstAttribute="top" secondItem="9hD-In-4bl" secondAttribute="top" constant="20" id="Z1z-Ut-TAW"/>
+                            <constraint firstAttribute="bottom" secondItem="IAg-JL-Fe1" secondAttribute="bottom" constant="64" id="bcK-au-aEo"/>
                             <constraint firstItem="IAg-JL-Fe1" firstAttribute="top" secondItem="4MN-aE-1C9" secondAttribute="bottom" constant="8" id="fCe-Oj-3C2"/>
                             <constraint firstAttribute="trailing" secondItem="4MN-aE-1C9" secondAttribute="trailing" constant="20" id="xjb-J2-rOl"/>
                         </constraints>
@@ -759,10 +760,10 @@
                         <constraints>
                             <constraint firstItem="Bhe-UW-dzN" firstAttribute="top" secondItem="82H-rz-6Wq" secondAttribute="bottom" constant="20" id="Kpv-3B-yTg"/>
                             <constraint firstItem="3et-Pt-2ga" firstAttribute="top" secondItem="Bhe-UW-dzN" secondAttribute="bottom" constant="8" id="RQX-tp-Vik"/>
-                            <constraint firstItem="IpV-Dp-irh" firstAttribute="top" secondItem="3et-Pt-2ga" secondAttribute="bottom" constant="15" id="TvE-8b-pW5"/>
                             <constraint firstItem="3et-Pt-2ga" firstAttribute="width" secondItem="Bhe-UW-dzN" secondAttribute="width" id="XHo-eq-onM"/>
                             <constraint firstItem="3et-Pt-2ga" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="Y2F-PL-VX7"/>
                             <constraint firstItem="Bhe-UW-dzN" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="hKq-Sp-W0I"/>
+                            <constraint firstAttribute="bottom" secondItem="3et-Pt-2ga" secondAttribute="bottom" constant="64" id="myh-8q-lUR"/>
                             <constraint firstAttribute="trailing" secondItem="Bhe-UW-dzN" secondAttribute="trailing" constant="20" id="rr8-De-D0v"/>
                             <constraint firstAttribute="trailing" secondItem="3et-Pt-2ga" secondAttribute="trailing" constant="20" id="sx2-Ml-IAO"/>
                         </constraints>
