@@ -65,22 +65,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	DHTabBarController *tabBarController = (DHTabBarController *)self.tabBarController;
-	[tabBarController setHistoryModel:[self.history[indexPath.row] duplicate]];
+	[tabBarController.historyModel setHistoryString:[NSString stringWithString:[self.history[indexPath.row] historyString]]];
 	[tabBarController segueToBasicCalculatorViewController];
 }
-
-- (IBAction)tappedHistoryCell:(id)sender {
-	
-}
-
-#pragma mark - Segue
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-	
-}
-
-
-
-
 
 @end
