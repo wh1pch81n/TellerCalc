@@ -10,12 +10,18 @@
 #import "DHTabBarController.h"
 #import "DHHistoryModel.h"
 
+@interface DHCalculatorBasicViewController ()
+
+@property (strong, atomic)UIView *customKeyboardView;
+
+@end
+
 @implementation DHCalculatorBasicViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.displayTextField.inputView = [[[NSBundle mainBundle] loadNibNamed:@"DHBasicKeyboardView" owner:self options:nil] lastObject];
+	self.displayTextField.inputView = [self initializeCustomKeyboardView];
 	
 	//TODO add KVO here so that when the tabbar's value changes it can change the display's text right away.  For now update the display by hand in the viewdidAppear
 }
@@ -25,6 +31,16 @@
 	DHTabBarController *tabBarController = (DHTabBarController *)self.tabBarController;
 	[self.displayTextField setText:tabBarController.historyModel.historyString];
 	[self.displayTextField becomeFirstResponder];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+	[self.displayTextField resignFirstResponder];
+	[super viewWillDisappear:animated];
+}
+
+- (UIView *)initializeCustomKeyboardView {
+	self.customKeyboardView = [[[NSBundle mainBundle] loadNibNamed:@"DHBasicKeyboardView" owner:self options:nil] lastObject];
+	return self.customKeyboardView;
 }
 
 @end
