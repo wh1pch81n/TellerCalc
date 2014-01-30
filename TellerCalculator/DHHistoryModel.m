@@ -27,9 +27,18 @@
 
 - (void)spliceHistoryStringAtIndex:(NSUInteger)index deleteAmount:(NSUInteger)delAmt insert:(NSString *)text {
 	NSLog(@"%d_%d %@", index, delAmt, text);
-	if (index > self.historyString.length) {
-		return;
+	if (delAmt) {
+		if (index == 0) {
+			return;
+		} else if (index > self.historyString.length) {
+			index = self.historyString.length;
+		}
+		
+		//TODO: situation when multiple are highlighted
+		
+		--index;
 	}
+
 	self.historyString = [self.historyString stringByReplacingCharactersInRange:NSMakeRange(index, delAmt) withString:text?:@""];
 }
 

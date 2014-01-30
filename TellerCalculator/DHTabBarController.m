@@ -44,10 +44,36 @@ NSString *const k0 = @"0";
 }
 
 - (void)modifyHistoryModelWithKey:(NSString *)key atRange:(NSRange)range{
-	if ([key isEqualToString:@"backspace"]) {
-		//NSLog(@"%d %d", range.location, range.length);
-		[self.historyModel spliceHistoryStringAtIndex:range.location deleteAmount:range.length insert:nil];
+	NSString *insert = nil;
+
+	if ([key isEqualToString:kBackspace]) {
+		insert = nil;
+		if (range.length == 0) {range.length = 1;}
+	} else if ([key isEqualToString:kLParenthesis]) {
+		insert = @"(";
+	} else if ([key isEqualToString:kRParenthesis]) {
+		insert = @")";
+	} else if ([key isEqualToString:kPercent]) {
+		insert = @"%";
+	} else if ([key isEqualToString:kDivide]) {
+		insert = @"÷";
+	} else if ([key isEqualToString:kMultipy]) {
+		insert = @"x";
+	} else if ([key isEqualToString:kAdd]) {
+		insert = @"+";
+	} else if ([key isEqualToString:kSubtract]) {
+		insert = @"-";
+	} else if ([key isEqualToString:kEquals]) {
+		insert = @"=";//TODO: remove this
+		//TODO: should save string into the table
+		//TODO: Launch code that Solves the code.  
+	} else if ([key isEqualToString:kPeriod]) {
+		insert = @".";
+	} else {
+		insert = key;
 	}
+	
+	[self.historyModel spliceHistoryStringAtIndex:range.location deleteAmount:range.length insert:insert];
 }
 
 @end
