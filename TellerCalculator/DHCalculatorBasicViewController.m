@@ -9,7 +9,7 @@
 #import "DHCalculatorBasicViewController.h"
 #import "DHTabBarController.h"
 #import "DHHistoryModel.h"
-#import "UITextField+DHTextField.h"
+//#import "UITextField+DHTextField.h"
 
 @interface DHCalculatorBasicViewController ()
 
@@ -55,9 +55,9 @@
 }
 
 - (IBAction)tappedBackspace:(id)sender {
-	NSLog(@"%@", self.displayTextField.selectedTextRange);
-	NSLog(@"%d %d", self.displayTextField.selectedRange.location, self.displayTextField.selectedRange.length);
-	[self.TBC modifyHistoryModelWithKey:@"backspace" atRange:self.displayTextField.selectedRange];
+//	NSLog(@"%@", self.displayTextField.selectedTextRange);
+//	NSLog(@"%d %d", self.displayTextField.selectedRange.location, self.displayTextField.selectedRange.length);
+	[self.TBC modifyHistoryModelWithKey:@"backspace" atRange:NSMakeRange(self.displayTextField.text.length-1, 1)];
 }
 
 @end

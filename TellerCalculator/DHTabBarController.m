@@ -24,7 +24,7 @@
 
 - (void)modifyHistoryModelWithKey:(NSString *)key atRange:(NSRange)range{
 	if ([key isEqualToString:@"backspace"]) {
-		NSLog(@"%d %d", range.location, range.length);
+		//NSLog(@"%d %d", range.location, range.length);
 		[self.historyModel spliceHistoryStringAtIndex:range.location deleteAmount:range.length insert:nil];
 	}
 }

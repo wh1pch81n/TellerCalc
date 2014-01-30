@@ -26,7 +26,8 @@
 }
 
 - (void)spliceHistoryStringAtIndex:(NSUInteger)index deleteAmount:(NSUInteger)delAmt insert:(NSString *)text {
-	if (index > self.historyString.length || index == 0) {
+	NSLog(@"%d_%d %@", index, delAmt, text);
+	if (index > self.historyString.length) {
 		return;
 	}
 	self.historyString = [self.historyString stringByReplacingCharactersInRange:NSMakeRange(index, delAmt) withString:text?:@""];
