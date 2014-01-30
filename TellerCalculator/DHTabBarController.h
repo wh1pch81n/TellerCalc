@@ -8,6 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const kBackspace;
+extern NSString *const kLParenthesis;
+extern NSString *const kRParenthesis;
+extern NSString *const kPercent;
+extern NSString *const kDivide;
+extern NSString *const kMultipy;
+extern NSString *const kAdd;
+extern NSString *const kSubtract;
+extern NSString *const kEquals;
+extern NSString *const kPeriod;
+extern NSString *const k9;
+extern NSString *const k8;
+extern NSString *const k7;
+extern NSString *const k6;
+extern NSString *const k5;
+extern NSString *const k4;
+extern NSString *const k3;
+extern NSString *const k2;
+extern NSString *const k1;
+extern NSString *const k0;
+
+
 @class DHHistoryModel;
 
 @interface DHTabBarController : UITabBarController
