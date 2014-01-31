@@ -69,10 +69,29 @@ NSString *const k0 = @"0";
 		insert = @"-";
 	} else if ([key isEqualToString:kEquals]) {
 		insert = @"=";//TODO: remove this
-		//TODO: should save string into the table
+		//TODO: should save string into the table iff it is a valid equation
 		//TODO: Launch code that Solves the code.  
 	} else if ([key isEqualToString:kPeriod]) {
 		insert = @".";
+		//TODO: implement some corrective logic just like before
+		/*snippit from old code
+		 - (IBAction)pushPeriod:(id)sender {
+		 //doesn't prevent 0.0.0 from being entered.  Doesn't appear to cause problems
+		 //but it is worth noting at least
+		 NSString* text = [[self TextField]text];
+		 if ( [text isEqualToString:@""] ||
+		 [text characterAtIndex:text.length-1] == 'x'||
+		 [[text substringWithRange:NSMakeRange(text.length-1, 1)]isEqualToString:@"÷"]||
+		 [text characterAtIndex:text.length-1] == '+'||
+		 [text characterAtIndex:text.length-1] == '-') {
+		 [self.TextField setText:[text stringByAppendingString:@"0."]];
+		 }else if([text characterAtIndex:text.length-1] >= '0' &&
+		 [text characterAtIndex:text.length-1] <= '9'){
+		 [self.TextField setText:[text stringByAppendingString:@"."]];
+		 }
+		 }
+		 
+		 */
 	} else {
 		insert = key;
 	}
