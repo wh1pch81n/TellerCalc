@@ -28,7 +28,6 @@
 	self.TBC = (DHTabBarController *)self.tabBarController;
 	self.displayTextField.inputView = [self initializeCustomKeyboardView];
 	
-	//TODO add KVO here so that when the tabbar's value changes it can change the display's text right away.  For now update the display by hand in the viewdidAppear
 	[self.TBC.historyModel addObserver:self forKeyPath:@"historyString" options:NSKeyValueObservingOptionNew context:nil];
 
 }
