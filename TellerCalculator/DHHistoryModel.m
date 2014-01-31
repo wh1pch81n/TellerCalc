@@ -12,34 +12,40 @@
 
 - (id)initWithString:(NSString *)str {
 	if (self = [super init]) {
-		[self setHistoryString:str];
+		[self setHistoryString:str?:@""];
 	}
 	return self;
 }
 
 - (id)init {
-	return [self initWithString:@""];
+	return [self initWithString:nil];
 }
 
 - (DHHistoryModel *)duplicate {
 	return [self initWithString:self.historyString];
 }
 
-- (void)spliceHistoryStringAtIndex:(NSUInteger)index deleteAmount:(NSUInteger)delAmt insert:(NSString *)text {
-	NSLog(@"%d_%d %@", index, delAmt, text);
-	if (delAmt) {
-		if (index == 0) {
-			return;
-		} else if (index > self.historyString.length) {
-			index = self.historyString.length;
-		}
-		
-		//TODO: situation when multiple are highlighted
-		
-		--index;
+- (void)spliceHistoryStringAtIndex:(NSUInteger)index selectionAmount:(NSUInteger)selAmt insert:(NSString *)text {
+	NSLog(@"%d_%d %@", index, selAmt, text);
+
+	if (index == 0) {
+		return;
+	} else if (index > self.historyString.length) {
+		index = self.historyString.length;
+	}
+	
+	switch (selAmt) {
+		case -1:
+			index--;
+			selAmt = -selAmt;
+			break;
+		case 0:
+			break;
+		default:
+			break;
 	}
 
-	self.historyString = [self.historyString stringByReplacingCharactersInRange:NSMakeRange(index, delAmt) withString:text?:@""];
+	self.historyString = [self.historyString stringByReplacingCharactersInRange:NSMakeRange(index, selAmt) withString:text?:@""];
 }
 
 @end

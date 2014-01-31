@@ -48,7 +48,11 @@ NSString *const k0 = @"0";
 
 	if ([key isEqualToString:kBackspace]) {
 		insert = nil;
-		if (range.length == 0) {range.length = 1;}
+		if (range.length == 0) {//unselected
+			range.length = -1;
+		} else if (range.length > 0) {//selected
+			
+		}
 	} else if ([key isEqualToString:kLParenthesis]) {
 		insert = @"(";
 	} else if ([key isEqualToString:kRParenthesis]) {
@@ -73,7 +77,7 @@ NSString *const k0 = @"0";
 		insert = key;
 	}
 	
-	[self.historyModel spliceHistoryStringAtIndex:range.location deleteAmount:range.length insert:insert];
+	[self.historyModel spliceHistoryStringAtIndex:range.location selectionAmount:range.length insert:insert];
 }
 
 @end
