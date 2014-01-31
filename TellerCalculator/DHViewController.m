@@ -40,7 +40,11 @@
 			  ||
 			( [text characterAtIndex:text.length-1] == ')')
 			 ){
+		
+		#pragma clang diagnostic push
+		#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 		[self performSelector:select];
+		#pragma clang diagnostic pop
 	}
 
 }
