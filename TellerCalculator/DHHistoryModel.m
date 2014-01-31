@@ -28,14 +28,15 @@
 - (void)spliceHistoryStringAtIndex:(NSUInteger)index selectionAmount:(NSUInteger)selAmt insert:(NSString *)text {
 	NSLog(@"%d_%d %@", index, selAmt, text);
 
-	if (index == 0) {
-		return;
-	} else if (index > self.historyString.length) {
+	if (index > self.historyString.length) {
 		index = self.historyString.length;
 	}
 	
 	switch (selAmt) {
 		case -1:
+			if (index == 0) {
+				return;
+			}
 			index--;
 			selAmt = -selAmt;
 			break;

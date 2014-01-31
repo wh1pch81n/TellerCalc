@@ -56,10 +56,15 @@
 
 - (IBAction)tappedButton:(id)sender {
 	//NSLog(@"%@", [sender valueForKey:@"keyCode"]);
-//	NSLog(@"%@", self.displayTextField.selectedTextRange);
-//	NSLog(@"%d %d", self.displayTextField.selectedRange.location, self.displayTextField.selectedRange.length);
+	//	NSLog(@"%@", self.displayTextField.selectedTextRange);
+	//	NSLog(@"%d %d", self.displayTextField.selectedRange.location, self.displayTextField.selectedRange.length);
+	
+	//TODO:figure out how to get the cursor position and the selection amount so you can make a more accurate NSRange
+	
 	DHButton *key = (DHButton *)sender;
 	[self.TBC modifyHistoryModelWithKey:key.keyCode atRange:NSMakeRange(self.displayTextField.text.length, 0)];
+	
+	//TODO: might have to reposition the cursor at this point.  It might default to the end of the string.
 }
 
 @end
