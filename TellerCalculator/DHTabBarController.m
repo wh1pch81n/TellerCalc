@@ -48,7 +48,7 @@ NSString *const k0 = @"0";
 
 - (void)modifyHistoryModelWithKey:(NSString *)key atRange:(NSRange)range{
 	NSString *insert = nil;
-
+	
 	if ([key isEqualToString:kBackspace]) {
 		insert = nil;
 		if (range.length == 0) {//unselected
@@ -71,10 +71,7 @@ NSString *const k0 = @"0";
 	} else if ([key isEqualToString:kSubtract]) {
 		insert = @"-";
 	} else if ([key isEqualToString:kEquals]) {
-		//insert = @"=";//TODO: remove this
-		//TODO: should save string into the table iff it is a valid equation
-		//TODO: Launch code that Solves the code.
-		if ((insert = [[DHCalculator new] CalculatedAnswerAsString:self.historyModel.historyString])) {
+		if ((insert = [[DHCalculator new] CalculatedAnswerAsString:[self cleanString:self.historyModel.historyString]])) {
 			[self.tableViewController appendHistory:self object:self.historyModel];
 			[self.historyModel setHistoryString:insert];
 		} else {
@@ -82,31 +79,47 @@ NSString *const k0 = @"0";
 		}
 		return;
 	} else if ([key isEqualToString:kPeriod]) {
-		insert = @".";
-		//TODO: implement some corrective logic just like before
-		/*snippit from old code
-		 - (IBAction)pushPeriod:(id)sender {
-		 //doesn't prevent 0.0.0 from being entered.  Doesn't appear to cause problems
-		 //but it is worth noting at least
-		 NSString* text = [[self TextField]text];
-		 if ( [text isEqualToString:@""] ||
-		 [text characterAtIndex:text.length-1] == 'x'||
-		 [[text substringWithRange:NSMakeRange(text.length-1, 1)]isEqualToString:@"÷"]||
-		 [text characterAtIndex:text.length-1] == '+'||
-		 [text characterAtIndex:text.length-1] == '-') {
-		 [self.TextField setText:[text stringByAppendingString:@"0."]];
-		 }else if([text characterAtIndex:text.length-1] >= '0' &&
-		 [text characterAtIndex:text.length-1] <= '9'){
-		 [self.TextField setText:[text stringByAppendingString:@"."]];
-		 }
-		 }
-		 
-		 */
+		//Entering period Before any number has been entered
+		printf("range: %d\n", range.location);
+		if (range.location == 0) {
+			insert = @"0.";
+		} else {
+			/*
+			 ([self.historyModel.historyString rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"0123456789."]].location == NSNotFound)
+			 */
+			
+			//Check if a period exists in this number.
+			for (int i = range.location -1; i; --i) {
+				if ([self.historyModel.historyString characterAtIndex:i] == '.') {
+					return;
+				} else if (!([self.historyModel.historyString characterAtIndex:range.location -1] >= '0' &&
+										 [self.historyModel.historyString characterAtIndex:range.location -1] <= '9')) {
+					
+					break;
+				}
+			}
+			
+			insert = @".";
+		}
 	} else {
 		insert = key;
 	}
 	
 	[self.historyModel spliceHistoryStringAtIndex:range.location selectionAmount:range.length insert:insert];
+}
+
+/**
+ Parses string and replaces characters with DHCalculator compliant symbols.
+ x gets replaced with *
+ ÷ gets replaced with /
+ % gets replaced with *0.01
+ @param str The string to be cleaned
+ @return the cleaned string.
+ */
+- (NSString *)cleanString:(NSString *)str {
+	return [[[str stringByReplacingOccurrencesOfString:@"x" withString:@"*"]
+					 stringByReplacingOccurrencesOfString:@"÷" withString:@"/"]
+					stringByReplacingOccurrencesOfString:@"%" withString:@"*0.01"];
 }
 
 @end
