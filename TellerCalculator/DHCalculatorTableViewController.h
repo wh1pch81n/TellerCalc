@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class DHHistoryModel;
+
 @interface DHCalculatorTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *history;
+
+/**
+ appends a hardcopy of the DHHistoryModel to the table.
+ @param sender The sender of this function
+ @param object the DHHistoryModel to be appended
+ */
+- (void)appendHistory:(id)sender object:(DHHistoryModel *)object;
 
 @end

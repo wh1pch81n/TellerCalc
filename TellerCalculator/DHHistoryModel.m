@@ -22,7 +22,9 @@
 }
 
 - (DHHistoryModel *)duplicate {
-	return [self initWithString:self.historyString];
+	DHHistoryModel *newInstance = [[[self class] alloc] init];
+	[newInstance setHistoryString:self.historyString];
+	return newInstance;
 }
 
 - (void)spliceHistoryStringAtIndex:(NSUInteger)index selectionAmount:(NSUInteger)selAmt insert:(NSString *)text {

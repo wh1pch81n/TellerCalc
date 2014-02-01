@@ -9,6 +9,8 @@
 #import "DHTabBarController.h"
 #import "DHCalculatorBasicViewController.h"
 #import "DHHistoryModel.h"
+#import "DHCalculator.h"
+#import "DHCalculatorTableViewController.h"
 
 NSString *const kBackspace = @"backspace";
 NSString *const kLParenthesis = @"leftParenthesis";
@@ -37,6 +39,7 @@ NSString *const k0 = @"0";
 	[super viewDidLoad];
 	[self setHistoryModel:[DHHistoryModel new]];
 	[self setSelectedIndex:1];
+	self.tableViewController = self.viewControllers[0];
 }
 
 - (void)segueToBasicCalculatorViewController {
@@ -68,9 +71,16 @@ NSString *const k0 = @"0";
 	} else if ([key isEqualToString:kSubtract]) {
 		insert = @"-";
 	} else if ([key isEqualToString:kEquals]) {
-		insert = @"=";//TODO: remove this
+		//insert = @"=";//TODO: remove this
 		//TODO: should save string into the table iff it is a valid equation
-		//TODO: Launch code that Solves the code.  
+		//TODO: Launch code that Solves the code.
+		if ((insert = [[DHCalculator new] CalculatedAnswerAsString:self.historyModel.historyString])) {
+			[self.tableViewController appendHistory:self object:self.historyModel];
+			[self.historyModel setHistoryString:insert];
+		} else {
+			[[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter valid input" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+		}
+		return;
 	} else if ([key isEqualToString:kPeriod]) {
 		insert = @".";
 		//TODO: implement some corrective logic just like before

@@ -31,10 +31,13 @@ extern NSString *const k0;
 
 
 @class DHHistoryModel;
+@class DHCalculatorTableViewController;
 
 @interface DHTabBarController : UITabBarController
 
 @property (strong, atomic) DHHistoryModel *historyModel;
+
+@property (strong, atomic) DHCalculatorTableViewController *tableViewController;
 
 /**
  Child viewControllers can call this function to tell the tabbarviewcontroller to move to the basicCalculatorView

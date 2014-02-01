@@ -30,7 +30,7 @@
 		self.history = [[NSMutableArray alloc] init];
 	}
 	
-	[self.history insertObject:object atIndex:0];
+	[self.history insertObject:object.duplicate atIndex:0];
 	NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 	[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }

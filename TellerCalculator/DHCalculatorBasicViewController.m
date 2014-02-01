@@ -16,7 +16,7 @@
 
 @property (strong, atomic)UIView *customKeyboardView;
 
-@property (weak, atomic)DHTabBarController *TBC;
+@property (weak, atomic)DHTabBarController *TBC;// this should be replaced with delegate to make it more generic
 
 @end
 
