@@ -14,9 +14,9 @@
 
 @interface DHCalculatorBasicViewController ()
 
-@property (strong, atomic)UIView *customKeyboardView;
-
-@property (weak, atomic)DHTabBarController *TBC;// this should be replaced with delegate to make it more generic
+@property (weak, nonatomic) IBOutlet UITextField *displayTextField;
+@property (strong, atomic) UIView *customKeyboardView;
+@property (nonatomic, copy) void (^observerBlock)(NSString *keyPath, id object, UITextField *displayTextField);
 
 @end
 
@@ -25,11 +25,8 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.TBC = (DHTabBarController *)self.tabBarController;
 	self.displayTextField.inputView = [self initializeCustomKeyboardView];
 	
-	[self.TBC.historyModel addObserver:self forKeyPath:@"historyString" options:NSKeyValueObservingOptionNew context:nil];
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -42,15 +39,19 @@
 	[super viewWillDisappear:animated];
 }
 
+- (void)displayTextShallObserve:(id)object forKeyPath:(NSString *)keypath observedChange:(void (^)(NSString *, id, UITextField *))observedChange{
+	[object addObserver:self forKeyPath:keypath options:NSKeyValueObservingOptionNew context:Nil];
+	[self setObserverBlock:observedChange];
+}
+
 - (UIView *)initializeCustomKeyboardView {
 	self.customKeyboardView = [[[NSBundle mainBundle] loadNibNamed:@"DHBasicKeyboardView" owner:self options:nil] lastObject];
 	return self.customKeyboardView;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-	if ([keyPath isEqualToString:@"historyString"]) {
-		NSString *HS = [(DHHistoryModel *)object historyString];
-		[self.displayTextField setText:HS];
+	if (self.observerBlock) {
+		self.observerBlock(keyPath, object, self.displayTextField);
 	}
 }
 
@@ -62,14 +63,14 @@
 	//TODO:figure out how to get the cursor position and the selection amount so you can make a more accurate NSRange
 	
 	DHButton *key = (DHButton *)sender;
-	[self.TBC modifyHistoryModelWithKey:key.keyCode atRange:NSMakeRange(self.displayTextField.text.length, 0)];
+	[self.delegate modifyHistoryModelWithKey:key.keyCode atRange:NSMakeRange(self.displayTextField.text.length, 0)];
 	
 	//TODO: might have to reposition the cursor at this point.  It might default to the end of the string.
 }
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
 	if (textField == self.displayTextField) {
-		[self.TBC modifyHistoryModelWithKey:kBackspace atRange:NSMakeRange(0, self.displayTextField.text.length)];
+		[self.delegate modifyHistoryModelWithKey:kBackspace atRange:NSMakeRange(0, self.displayTextField.text.length)];
 	}
 	return NO;
 }

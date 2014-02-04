@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DHCalculatorBasicViewController.h"
 
 extern NSString *const kBackspace;
 extern NSString *const kLParenthesis;
@@ -33,22 +34,15 @@ extern NSString *const k0;
 @class DHHistoryModel;
 @class DHCalculatorTableViewController;
 
-@interface DHTabBarController : UITabBarController
+@interface DHTabBarController : UITabBarController <DHCalculatorBasicViewDelegate>
 
 @property (strong, atomic) DHHistoryModel *historyModel;
-
 @property (strong, atomic) DHCalculatorTableViewController *tableViewController;
+@property (strong, atomic) DHCalculatorBasicViewController *basicViewController;
 
 /**
  Child viewControllers can call this function to tell the tabbarviewcontroller to move to the basicCalculatorView
  */
 - (void)segueToBasicCalculatorViewController;
-
-/**
- Method recieves input from the basicCalculatorView's buttons and reacts accordingly
- @param key
- @param range The location property marks position of the caret (0 being before the first character and str.length and greater being after the last character). The length property counts how many characters are highlighted.
- */
-- (void)modifyHistoryModelWithKey:(NSString *)key atRange:(NSRange)range;
 
 @end

@@ -39,7 +39,17 @@ NSString *const k0 = @"0";
 	[super viewDidLoad];
 	[self setHistoryModel:[DHHistoryModel new]];
 	[self setSelectedIndex:1];
+
 	self.tableViewController = self.viewControllers[0];
+	self.basicViewController = self.viewControllers[1];
+	[self.basicViewController setDelegate:self];
+	
+	[self.basicViewController displayTextShallObserve:self.historyModel forKeyPath:@"historyString" observedChange:^(NSString *keyPath, id object, UITextField *displayTextField) {
+		if ([keyPath isEqualToString:@"historyString"]) {
+			NSString *HS = [(DHHistoryModel *)object historyString];
+			[displayTextField setText:HS];
+		}
+	}];
 }
 
 - (void)segueToBasicCalculatorViewController {
