@@ -69,7 +69,7 @@
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
 	if (textField == self.displayTextField) {
-		self.TBC.historyModel.historyString = @"";
+		[self.TBC modifyHistoryModelWithKey:kBackspace atRange:NSMakeRange(0, self.displayTextField.text.length)];
 	}
 	return NO;
 }

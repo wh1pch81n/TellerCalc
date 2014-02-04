@@ -15,9 +15,9 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"1+2"]];
-	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"1+2x3"]];
-	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"(1+2)x3"]];
+//	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"1+2"]];
+//	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"1+2x3"]];
+//	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"(1+2)x3"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
