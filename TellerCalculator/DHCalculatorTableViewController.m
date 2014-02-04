@@ -64,9 +64,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	DHTabBarController *tabBarController = (DHTabBarController *)self.tabBarController;
-	[tabBarController.historyModel setHistoryString:[NSString stringWithString:[self.history[indexPath.row] historyString]]];
-	[tabBarController segueToBasicCalculatorViewController];
+	[self.delegate receiveSelectedTableViewObject:self.history[indexPath.row]];
+	[(DHTabBarController *)self.tabBarController segueToBasicCalculatorViewController];
 }
 
 @end

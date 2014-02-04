@@ -56,6 +56,10 @@ NSString *const k0 = @"0";
 	self.selectedIndex = 1;
 }
 
+- (void)receiveSelectedTableViewObject:(id)object {
+	[self.historyModel setHistoryString:[(DHHistoryModel *)object historyString]];
+}
+
 - (void)modifyHistoryModelWithKey:(NSString *)key atRange:(NSRange)range{
 	NSString *insert = nil;
 	

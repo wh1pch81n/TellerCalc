@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DHCalculatorBasicViewController.h"
+#import "DHCalculatorTableViewController.h"
 
 extern NSString *const kBackspace;
 extern NSString *const kLParenthesis;
@@ -34,7 +35,7 @@ extern NSString *const k0;
 @class DHHistoryModel;
 @class DHCalculatorTableViewController;
 
-@interface DHTabBarController : UITabBarController <DHCalculatorBasicViewDelegate>
+@interface DHTabBarController : UITabBarController <DHCalculatorBasicViewDelegate, DHCalculatorTableViewControllerDelegate>
 
 @property (strong, atomic) DHHistoryModel *historyModel;
 @property (strong, atomic) DHCalculatorTableViewController *tableViewController;

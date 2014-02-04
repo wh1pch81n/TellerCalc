@@ -13,6 +13,7 @@
 @interface DHCalculatorTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *history;
+@property (weak) id delegate;
 
 /**
  appends a hardcopy of the DHHistoryModel to the table.
@@ -20,5 +21,11 @@
  @param object the DHHistoryModel to be appended
  */
 - (void)appendHistory:(id)sender object:(DHHistoryModel *)object;
+
+@end
+
+@protocol DHCalculatorTableViewControllerDelegate <NSObject>
+
+- (void)receiveSelectedTableViewObject:(id)object;
 
 @end
