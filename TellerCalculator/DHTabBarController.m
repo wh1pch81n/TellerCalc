@@ -79,33 +79,41 @@ NSString *const k0 = @"0";
 		}
 		return;
 	} else if ([key isEqualToString:kPeriod]) {
-		//Entering period Before any number has been entered
-		printf("range: %d\n", range.location);
+		NSString *histStr = self.historyModel.historyString;
 		if (range.location == 0) {
 			insert = @"0.";
+		} else if (![self characterAtIndexIsNumber:histStr index:range.location -1]) {
+			insert = @"0.";
+			if ([histStr characterAtIndex:range.location -1] == '.') {
+				return;
+			}
 		} else {
-			/*
-			 ([self.historyModel.historyString rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"0123456789."]].location == NSNotFound)
-			 */
-			
 			//Check if a period exists in this number.
 			for (int i = range.location -1; i; --i) {
-				if ([self.historyModel.historyString characterAtIndex:i] == '.') {
+				if ([histStr characterAtIndex:i] == '.') {
 					return;
-				} else if (!([self.historyModel.historyString characterAtIndex:range.location -1] >= '0' &&
-										 [self.historyModel.historyString characterAtIndex:range.location -1] <= '9')) {
-					
+				} else if (![self characterAtIndexIsNumber:histStr index:i]) {
 					break;
 				}
 			}
 			
 			insert = @".";
 		}
-	} else {
+	} else { //Enters a string number
 		insert = key;
 	}
 	
 	[self.historyModel spliceHistoryStringAtIndex:range.location selectionAmount:range.length insert:insert];
+}
+
+/**
+ Determines if the character at the given index is a character or not.
+ @param str the given string
+ @param index index to check
+ @return true if the character x is 0 ≤ x ≤ 9. Otherwise false 
+ */
+- (BOOL)characterAtIndexIsNumber:(NSString *)str index:(NSUInteger)index {
+	return [str characterAtIndex:index] >= '0' && [str characterAtIndex:index] <= '9';
 }
 
 /**
