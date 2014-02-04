@@ -23,6 +23,8 @@
 		7F4EEC5B189845A300400C4E /* DHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4EEC5A189845A300400C4E /* DHTextField.m */; };
 		7F4EEC5F18984C6C00400C4E /* DHBasicKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F4EEC5E18984C6C00400C4E /* DHBasicKeyboardView.xib */; };
 		7F5B891F189AFF2C001AF478 /* DHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B891E189AFF2C001AF478 /* DHButton.m */; };
+		7F65C18518A08925009E5934 /* DHHistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F65C18318A08925009E5934 /* DHHistoryModel.xcdatamodeld */; };
+		7F65C18818A08B33009E5934 /* HistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F65C18718A08B33009E5934 /* HistoryModel.m */; };
 		7F9674221893349800144A91 /* DHCalculatorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9674211893349800144A91 /* DHCalculatorStoryboard.storyboard */; };
 		7FC03E111746F8BC00949AA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC03E101746F8BC00949AA5 /* UIKit.framework */; };
 		7FC03E131746F8BC00949AA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC03E121746F8BC00949AA5 /* Foundation.framework */; };
@@ -70,6 +72,9 @@
 		7F4EEC5E18984C6C00400C4E /* DHBasicKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHBasicKeyboardView.xib; sourceTree = "<group>"; };
 		7F5B891D189AFF2C001AF478 /* DHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHButton.h; sourceTree = "<group>"; };
 		7F5B891E189AFF2C001AF478 /* DHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHButton.m; sourceTree = "<group>"; };
+		7F65C18418A08925009E5934 /* DHHistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DHHistoryModel.xcdatamodel; sourceTree = "<group>"; };
+		7F65C18618A08B33009E5934 /* HistoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryModel.h; sourceTree = "<group>"; };
+		7F65C18718A08B33009E5934 /* HistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryModel.m; sourceTree = "<group>"; };
 		7F9674211893349800144A91 /* DHCalculatorStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DHCalculatorStoryboard.storyboard; sourceTree = "<group>"; };
 		7FC03E0D1746F8BC00949AA5 /* TellerCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TellerCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC03E101746F8BC00949AA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -181,6 +186,9 @@
 				7FC03E171746F8BC00949AA5 /* Supporting Files */,
 				7FD5A3DB1899A55C0004EFD1 /* UITextField+DHTextField.h */,
 				7FD5A3DC1899A55C0004EFD1 /* UITextField+DHTextField.m */,
+				7F65C18318A08925009E5934 /* DHHistoryModel.xcdatamodeld */,
+				7F65C18618A08B33009E5934 /* HistoryModel.h */,
+				7F65C18718A08B33009E5934 /* HistoryModel.m */,
 			);
 			path = TellerCalculator;
 			sourceTree = "<group>";
@@ -307,7 +315,9 @@
 				7FD5A3DD1899A55C0004EFD1 /* UITextField+DHTextField.m in Sources */,
 				7F4EEC5B189845A300400C4E /* DHTextField.m in Sources */,
 				7FC03E351746FDA100949AA5 /* DHCalculator.m in Sources */,
+				7F65C18818A08B33009E5934 /* HistoryModel.m in Sources */,
 				7FC03E381746FF4200949AA5 /* DHPair.m in Sources */,
+				7F65C18518A08925009E5934 /* DHHistoryModel.xcdatamodeld in Sources */,
 				7F46F0661897466D000EE5E6 /* DHTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +454,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F65C18318A08925009E5934 /* DHHistoryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F65C18418A08925009E5934 /* DHHistoryModel.xcdatamodel */,
+			);
+			currentVersion = 7F65C18418A08925009E5934 /* DHHistoryModel.xcdatamodel */;
+			path = DHHistoryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7FC03E051746F8BC00949AA5 /* Project object */;
 }
