@@ -67,4 +67,11 @@
 	//TODO: might have to reposition the cursor at this point.  It might default to the end of the string.
 }
 
+- (BOOL)textFieldShouldClear:(UITextField *)textField {
+	if (textField == self.displayTextField) {
+		self.TBC.historyModel.historyString = @"";
+	}
+	return NO;
+}
+
 @end

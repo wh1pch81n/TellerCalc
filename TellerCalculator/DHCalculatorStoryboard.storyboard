@@ -83,6 +83,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WHv-1G-Ji8" id="YaM-wi-j7w"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3et-Pt-2ga" userLabel="View - row 0">
                                 <rect key="frame" x="20" y="87" width="280" height="65"/>
