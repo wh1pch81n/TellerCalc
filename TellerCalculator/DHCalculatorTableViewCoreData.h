@@ -15,7 +15,7 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *psc;
 
 - (void)saveContext;
-- (NSURL *)applicationDocumentsDirector;
+- (NSURL *)applicationDocumentsDirectory;
 - (NSManagedObjectContext *)managedObjectContext;
 - (NSManagedObjectModel *)managedObjectModel;
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
