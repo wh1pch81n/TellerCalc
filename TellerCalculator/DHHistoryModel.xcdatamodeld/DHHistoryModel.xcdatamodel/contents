@@ -2,8 +2,9 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="HistoryModel" representedClassName="HistoryModel" syncable="YES">
         <attribute name="historyString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="HistoryModel" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="HistoryModel" positionX="160" positionY="192" width="128" height="73"/>
     </elements>
 </model>

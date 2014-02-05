@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @class DHHistoryModel;
 
-@interface DHCalculatorTableViewController : UITableViewController
+@interface DHCalculatorTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
+@property (strong, nonatomic) NSFetchedResultsController *frc;
+@property (strong, nonatomic) NSManagedObjectContext *moc;
 
 @property (strong, nonatomic) NSMutableArray *history;
 @property (weak) id delegate;
