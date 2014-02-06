@@ -15,6 +15,7 @@
 NSString *const kHistoryModel = @"HistoryModel";
 NSString *const kHistoryString = @"historyString";
 NSString *const kTimeStamp = @"timeStamp";
+NSString *const kMyHistoryCell = @"MyHistoryCell";
 
 @implementation DHCalculatorTableViewController
 
@@ -43,17 +44,18 @@ NSString *const kTimeStamp = @"timeStamp";
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 1;
+	return self.frc.sections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return self.history.count;
+	id <NSFetchedResultsSectionInfo> sectionInfo = self.frc.sections[section];
+	return [sectionInfo numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyHistoryCell"];
-	DHHistoryModel *h = [self.history objectAtIndex:indexPath.row];
-	cell.textLabel.text = h.historyString;
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMyHistoryCell];
+	[self configureCell:cell atIndexPath:indexPath];
+	
 	return cell;
 }
 
@@ -63,14 +65,26 @@ NSString *const kTimeStamp = @"timeStamp";
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 	if(editingStyle == UITableViewCellEditingStyleDelete) {
-		[self.history removeObjectAtIndex:indexPath.row];
-		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+		NSManagedObjectContext *context = self.frc.managedObjectContext;
+		[context deleteObject:[self.frc objectAtIndexPath:indexPath]];
+		
+		NSError *error = nil;
+		if (![context save:&error]) {
+			// Replace this implementation with code to handle the error appropriately.
+			// abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+			abort();
+		}
 	}
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+	// the table should not be re-orderable
+	return NO;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[self.delegate receiveSelectedTableViewObject:self.history[indexPath.row]];
-	[(DHTabBarController *)self.tabBarController segueToBasicCalculatorViewController];
 }
 
 #pragma mark - insert new object

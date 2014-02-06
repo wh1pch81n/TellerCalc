@@ -10,13 +10,20 @@
 
 #import "DHViewController.h"
 #import "DHTabBarController.h"
+#import "DHCalculatorTableViewCoreData.h"
 
 @implementation DHAppDelegate
+
+@synthesize tableViewCoreData = _tableViewCoreData;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// Override point for customization after application launch.
-
+	DHCalculatorTableViewCoreData *tvcd = [DHCalculatorTableViewCoreData new];
+	UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
+	DHCalculatorTableViewController *controller = (DHCalculatorTableViewController *)tabBar.viewControllers.firstObject;
+	
+	controller.moc = [tvcd managedObjectContext];
 	return YES;
 }
 
@@ -45,6 +52,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+	[_tableViewCoreData saveContext];
 }
 
 @end
