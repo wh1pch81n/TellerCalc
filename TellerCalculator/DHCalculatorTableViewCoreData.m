@@ -15,9 +15,9 @@ NSString *const kMomd = @"momd";
 
 @implementation DHCalculatorTableViewCoreData
 
-@synthesize moc = _moc;
-@synthesize mom = _mom;
-@synthesize psc = _psc;
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 #pragma mark - Applications's documents directory
 
@@ -25,7 +25,13 @@ NSString *const kMomd = @"momd";
  Returns the URL to the application's documents directory
  */
 - (NSURL *)applicationDocumentsDirectory {
-	return [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].lastObject;
+	NSFileManager *defaultManager = [NSFileManager defaultManager];
+	NSLog(@"%@", defaultManager);
+	NSArray *urls = [defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+	NSLog(@"%@", urls);
+	NSURL *url = [urls lastObject];
+	NSLog(@"%@", url);
+	return url;
 }
 
 #pragma mark - Core Data Stack
@@ -35,17 +41,17 @@ NSString *const kMomd = @"momd";
  If the context doesn't already exist, it is created and bound to the persistent store coordinator for the tablevViewController
  */
 - (NSManagedObjectContext *)managedObjectContext {
-	if (_moc) {
-		return self.managedObjectContext;
+	if (_managedObjectContext != nil) {
+		return _managedObjectContext;
 	}
 	
 	NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-	if (coordinator) {
-		_moc = [[NSManagedObjectContext alloc] init];
-		_moc.persistentStoreCoordinator = coordinator;
+	if (coordinator != nil) {
+		_managedObjectContext = [NSManagedObjectContext new];
+		[_managedObjectContext setPersistentStoreCoordinator:coordinator];
 	}
 	
-	return _moc;
+	return _managedObjectContext;
 }
 
 /**
@@ -53,14 +59,14 @@ NSString *const kMomd = @"momd";
  If the model doesn't already exist, it is created
  */
 - (NSManagedObjectModel *)managedObjectModel {
-	if (_mom) {
-		return _mom;
+	if (_managedObjectModel != nil) {
+		return _managedObjectModel;
 	}
 	
 	NSURL *modelURL = [[NSBundle mainBundle] URLForResource:kDHHistoryModel withExtension:kMomd];
-	_mom = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+	_managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
 	
-	return _mom;
+	return _managedObjectModel;
 }
 
 /**
@@ -68,16 +74,16 @@ NSString *const kMomd = @"momd";
  If the coordinator doesn't already exist, it is created and the store is added to it
  */
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-	if (_psc) {
-		return _psc;
+	if (_persistentStoreCoordinator != nil) {
+		return _persistentStoreCoordinator;
 	}
 	
 	NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", kDHHistoryModel, kSqlite]];
-	
+	NSLog(@"%@", storeURL);
 	NSError *error = nil;
-	_psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.mom];
+	_persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
 	
-	if (![_psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+	if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
 		/*
 		 Replace this implementation with code to handle the error appropriately.
 		 
@@ -105,15 +111,15 @@ NSString *const kMomd = @"momd";
 		abort();
 	}
 	
-	return _psc;
+	return _persistentStoreCoordinator;
 }
 
 #pragma mark - Save Context
 
 - (void)saveContext {
 	NSError *error = nil;
-	if (_moc) {
-		if (_moc.hasChanges && ![_moc save:&error]) {
+	if (self.managedObjectContext != nil) {
+		if ([self.managedObjectContext hasChanges] && ![self.managedObjectContext save:&error]) {
 			// Replace this implementation with code to handle the error appropriately.
 			// abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);

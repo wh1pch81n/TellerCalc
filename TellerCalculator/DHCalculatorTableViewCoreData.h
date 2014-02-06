@@ -10,9 +10,9 @@
 
 @interface DHCalculatorTableViewCoreData : NSObject
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *moc;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *mom;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *psc;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
