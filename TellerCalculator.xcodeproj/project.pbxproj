@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5044D1C118A43885005F1C2D /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 5044D1C018A43885005F1C2D /* ReadMe */; };
 		7F044599174B2D29006FCC9F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F044594174B2D29006FCC9F /* Icon-Small-50.png */; };
 		7F04459A174B2D29006FCC9F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F044595174B2D29006FCC9F /* Icon-Small@2x.png */; };
 		7F04459B174B2D29006FCC9F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F044596174B2D29006FCC9F /* Icon-Small.png */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5044D1C018A43885005F1C2D /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
 		7F044594174B2D29006FCC9F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		7F044595174B2D29006FCC9F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		7F044596174B2D29006FCC9F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		7FC03E041746F8BC00949AA5 = {
 			isa = PBXGroup;
 			children = (
+				5044D1C018A43885005F1C2D /* ReadMe */,
 				7FC03E161746F8BC00949AA5 /* TellerCalculator */,
 				7FC03E0F1746F8BC00949AA5 /* Frameworks */,
 				7FC03E0E1746F8BC00949AA5 /* Products */,
@@ -211,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5044D1C118A43885005F1C2D /* ReadMe in Resources */,
 				7FC03E1B1746F8BC00949AA5 /* InfoPlist.strings in Resources */,
 				7FC03E231746F8BC00949AA5 /* Default.png in Resources */,
 				7FC03E251746F8BC00949AA5 /* Default@2x.png in Resources */,
