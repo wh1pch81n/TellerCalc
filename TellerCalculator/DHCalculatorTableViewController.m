@@ -28,7 +28,7 @@ NSString *const kMyHistoryCell = @"MyHistoryCell";
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	[self.tableView reloadData];
+	//[self.tableView reloadData];
 }
 
 - (void)appendHistory:(id)sender object:(DHHistoryModel *)object {
