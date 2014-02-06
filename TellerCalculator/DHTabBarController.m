@@ -41,6 +41,7 @@ NSString *const k0 = @"0";
 	[self setSelectedIndex:1];
 
 	self.tableViewController = self.viewControllers[0];
+	[self.tableViewController setDelegate:self];
 	self.basicViewController = self.viewControllers[1];
 	[self.basicViewController setDelegate:self];
 	
@@ -57,7 +58,9 @@ NSString *const k0 = @"0";
 }
 
 - (void)receiveSelectedTableViewObject:(id)object {
-	[self.historyModel setHistoryString:[(DHHistoryModel *)object historyString]];
+	NSString *hs = [object valueForKey:@"historyString"];
+	NSLog(@"%@", hs);
+	[self.historyModel setHistoryString:hs];
 	[self segueToBasicCalculatorViewController];
 }
 

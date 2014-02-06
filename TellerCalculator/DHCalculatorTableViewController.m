@@ -32,13 +32,22 @@ NSString *const kMyHistoryCell = @"MyHistoryCell";
 }
 
 - (void)appendHistory:(id)sender object:(DHHistoryModel *)object {
-	if (!self.history) {
-		self.history = [[NSMutableArray alloc] init];
-	}
+	NSManagedObjectContext *context = [[self fetchedResultsController] managedObjectContext];
+	NSEntityDescription *entityDesc = [[[self fetchedResultsController] fetchRequest] entity];
+	NSManagedObject *newMOC = [NSEntityDescription insertNewObjectForEntityForName:[entityDesc name] inManagedObjectContext:context];
 	
-	[self.history insertObject:object.duplicate atIndex:0];
-	NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-	[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+	//update properties
+	[newMOC setValue:[object historyString] forKey:kHistoryString];
+	[newMOC setValue:[NSDate date] forKey:kTimeStamp];
+	
+	// Save the context.
+	NSError *error = nil;
+	if (![context save:&error]) {
+		// Replace this implementation with code to handle the error appropriately.
+		// abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		abort();
+	}
 }
 
 #pragma mark - Table View
@@ -84,7 +93,9 @@ NSString *const kMyHistoryCell = @"MyHistoryCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[self.delegate receiveSelectedTableViewObject:self.history[indexPath.row]];
+	NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+	NSLog(@"%@", self.delegate);
+	[self.delegate receiveSelectedTableViewObject:object];
 }
 
 #pragma mark - insert new object
@@ -181,6 +192,7 @@ NSString *const kMyHistoryCell = @"MyHistoryCell";
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
 	NSManagedObject *object = [self.frc objectAtIndexPath:indexPath];
 	cell.textLabel.text = [[object valueForKey:kHistoryString] description];
+	cell.detailTextLabel.text = [[object valueForKey:kTimeStamp] description];
 }
 
 @end
