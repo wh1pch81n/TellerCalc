@@ -16,6 +16,7 @@ NSString *const kHistoryModel = @"HistoryModel";
 NSString *const kHistoryString = @"historyString";
 NSString *const kTimeStamp = @"timeStamp";
 NSString *const kMyHistoryCell = @"MyHistoryCell";
+NSString *const kCacheName = @"Master";
 
 @implementation DHCalculatorTableViewController
 
@@ -53,11 +54,11 @@ NSString *const kMyHistoryCell = @"MyHistoryCell";
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return self.frc.sections.count;
+	return [[[self fetchedResultsController] sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	id <NSFetchedResultsSectionInfo> sectionInfo = self.frc.sections[section];
+	id <NSFetchedResultsSectionInfo> sectionInfo = [[self fetchedResultsController] sections][section];
 	return [sectionInfo numberOfObjects];
 }
 
@@ -74,8 +75,8 @@ NSString *const kMyHistoryCell = @"MyHistoryCell";
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 	if(editingStyle == UITableViewCellEditingStyleDelete) {
-		NSManagedObjectContext *context = self.frc.managedObjectContext;
-		[context deleteObject:[self.frc objectAtIndexPath:indexPath]];
+		NSManagedObjectContext *context = [[self fetchedResultsController] managedObjectContext];
+		[context deleteObject:[[self fetchedResultsController] objectAtIndexPath:indexPath]];
 		
 		NSError *error = nil;
 		if (![context save:&error]) {
@@ -95,25 +96,25 @@ NSString *const kMyHistoryCell = @"MyHistoryCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
 	NSLog(@"%@", self.delegate);
-	[self.delegate receiveSelectedTableViewObject:object];
+	[[self delegate] receiveSelectedTableViewObject:object];
 }
 
 #pragma mark - insert new object
 
-- (void)insertNewObject:(id)sender {
-	
-}
+//- (void)insertNewObject:(id)sender {
+//	
+//}
 
 #pragma mark - Fetched Results Controller
 
 - (NSFetchedResultsController *)fetchedResultsController {
-	if (_frc) {
-		return _frc;
+	if (_fetchedResultsController != nil) {
+		return _fetchedResultsController;
 	}
 	
 	NSFetchRequest *fetchRequest = [NSFetchRequest new];
 	//Edit entity name as appropriate
-	NSEntityDescription *entity = [NSEntityDescription entityForName:kHistoryModel inManagedObjectContext:self.moc];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:kHistoryModel inManagedObjectContext:[self managedObjectContext]];
 	[fetchRequest setEntity:entity];
 	
 	//set batch size to an appropriate number
@@ -121,21 +122,21 @@ NSString *const kMyHistoryCell = @"MyHistoryCell";
 	
 	//Edit sort key as appropriate
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:kTimeStamp ascending:NO];
-	fetchRequest.sortDescriptors = @[sortDescriptor];
+	[fetchRequest setSortDescriptors:@[sortDescriptor]];
 	
 	//Edit the section name key path and cache name if appropriate.
 	//nill for section name key path means "no sections"
-	self.frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.moc sectionNameKeyPath:nil cacheName:nil];
+	[self setFetchedResultsController:[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[self managedObjectContext]  sectionNameKeyPath:nil cacheName:kCacheName]];
 	
 	NSError *error = nil;
-	if (![self.frc performFetch:&error]) {
+	if (![[self fetchedResultsController] performFetch:&error]) {
 		// Replace this implementation with code to handle the error appropriately.
 		// abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		abort();
 	}
 	
-	return _frc;
+	return _fetchedResultsController;
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
@@ -190,7 +191,7 @@ NSString *const kMyHistoryCell = @"MyHistoryCell";
  */
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-	NSManagedObject *object = [self.frc objectAtIndexPath:indexPath];
+	NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
 	cell.textLabel.text = [[object valueForKey:kHistoryString] description];
 	cell.detailTextLabel.text = [[object valueForKey:kTimeStamp] description];
 }

@@ -23,7 +23,7 @@
 	UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
 	DHCalculatorTableViewController *controller = (DHCalculatorTableViewController *)tabBar.viewControllers.firstObject;
 	
-	controller.moc = [tvcd managedObjectContext];
+    [controller setManagedObjectContext:[tvcd managedObjectContext]];
 	return YES;
 }
 

@@ -13,10 +13,10 @@
 
 @interface DHCalculatorTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) NSFetchedResultsController *frc;
-@property (strong, nonatomic) NSManagedObjectContext *moc;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-@property (strong, nonatomic) NSMutableArray *history;
+//@property (strong, nonatomic) NSMutableArray *history;
 @property (weak) id delegate;
 
 /**
