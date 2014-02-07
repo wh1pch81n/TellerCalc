@@ -31,7 +31,7 @@
 	[self setTextField:nil];
 	[super viewDidUnload];
 }
--(void)ValidateThenPerformSelector:(SEL) select{
+-(void)ValidateThenPerformSelector:(SEL) select{ //TODO: port to new home
 	NSString* text = [[self TextField]text];
 	if ( [text isEqualToString:@""]) {
 		return;
@@ -40,7 +40,11 @@
 			  ||
 			( [text characterAtIndex:text.length-1] == ')')
 			 ){
+		
+		#pragma clang diagnostic push
+		#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 		[self performSelector:select];
+		#pragma clang diagnostic pop
 	}
 
 }
@@ -80,7 +84,7 @@
 	[[self TextField] setText:@""];
 }
 
-- (IBAction)SolveEquation:(id)sender {
+- (IBAction)SolveEquation:(id)sender {//TODO: port this to new home
 	[self ValidateThenPerformSelector:@selector(doSolveEquation)];
 }
 - (IBAction)pushMultiply:(id)sender{
