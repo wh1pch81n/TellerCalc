@@ -16,6 +16,19 @@
 		7F04459F174B2DBC006FCC9F /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F04459E174B2DBC006FCC9F /* readme.txt */; };
 		7F09A8BB1747238E00572792 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F09A8BA1747238E00572792 /* Icon.png */; };
 		7F09A8BD174723DF00572792 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F09A8BC174723DF00572792 /* Icon@2x.png */; };
+		7F46F0661897466D000EE5E6 /* DHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46F0651897466D000EE5E6 /* DHTabBarController.m */; };
+		7F46F069189746CB000EE5E6 /* DHCalculatorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46F068189746CB000EE5E6 /* DHCalculatorTableViewController.m */; };
+		7F46F06C189746FB000EE5E6 /* DHCalculatorBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46F06B189746FB000EE5E6 /* DHCalculatorBasicViewController.m */; };
+		7F46F06F1897472D000EE5E6 /* DHCalculatorAdvancedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46F06E1897472D000EE5E6 /* DHCalculatorAdvancedViewController.m */; };
+		7F46F07318974F01000EE5E6 /* DHHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46F07218974F01000EE5E6 /* DHHistoryModel.m */; };
+		7F4EEC5B189845A300400C4E /* DHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4EEC5A189845A300400C4E /* DHTextField.m */; };
+		7F4EEC5F18984C6C00400C4E /* DHBasicKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F4EEC5E18984C6C00400C4E /* DHBasicKeyboardView.xib */; };
+		7F5B891F189AFF2C001AF478 /* DHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B891E189AFF2C001AF478 /* DHButton.m */; };
+		7F65C18518A08925009E5934 /* DHHistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F65C18318A08925009E5934 /* DHHistoryModel.xcdatamodeld */; };
+		7F9674221893349800144A91 /* DHCalculatorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9674211893349800144A91 /* DHCalculatorStoryboard.storyboard */; };
+		7FA3501918A1AD5F001F3FFB /* DHCalculatorTableViewCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3501818A1AD5F001F3FFB /* DHCalculatorTableViewCoreData.m */; };
+		7FA3501B18A1BD82001F3FFB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA3501A18A1BD82001F3FFB /* CoreData.framework */; };
+		7FA3501E18A1D1ED001F3FFB /* HistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA3501D18A1D1ED001F3FFB /* HistoryModel.m */; };
 		7FC03E111746F8BC00949AA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC03E101746F8BC00949AA5 /* UIKit.framework */; };
 		7FC03E131746F8BC00949AA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC03E121746F8BC00949AA5 /* Foundation.framework */; };
 		7FC03E151746F8BC00949AA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC03E141746F8BC00949AA5 /* CoreGraphics.framework */; };
@@ -29,6 +42,7 @@
 		7FC03E2D1746F8BC00949AA5 /* DHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC03E2B1746F8BC00949AA5 /* DHViewController.xib */; };
 		7FC03E351746FDA100949AA5 /* DHCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC03E341746FDA100949AA5 /* DHCalculator.m */; };
 		7FC03E381746FF4200949AA5 /* DHPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC03E371746FF4200949AA5 /* DHPair.m */; };
+		7FD5A3DD1899A55C0004EFD1 /* UITextField+DHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD5A3DC1899A55C0004EFD1 /* UITextField+DHTextField.m */; };
 		7FDE3F62174DAF9B00018315 /* ScreenShot1_4in.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDE3F5C174DAF9B00018315 /* ScreenShot1_4in.png */; };
 		7FDE3F63174DAF9B00018315 /* ScreenShot1_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDE3F5D174DAF9B00018315 /* ScreenShot1_ipad.png */; };
 		7FDE3F64174DAF9B00018315 /* ScreenShot1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDE3F5E174DAF9B00018315 /* ScreenShot1.png */; };
@@ -47,6 +61,28 @@
 		7F04459E174B2DBC006FCC9F /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		7F09A8BA1747238E00572792 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		7F09A8BC174723DF00572792 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		7F46F0641897466D000EE5E6 /* DHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTabBarController.h; sourceTree = "<group>"; };
+		7F46F0651897466D000EE5E6 /* DHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTabBarController.m; sourceTree = "<group>"; };
+		7F46F067189746CB000EE5E6 /* DHCalculatorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCalculatorTableViewController.h; sourceTree = "<group>"; };
+		7F46F068189746CB000EE5E6 /* DHCalculatorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCalculatorTableViewController.m; sourceTree = "<group>"; };
+		7F46F06A189746FB000EE5E6 /* DHCalculatorBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCalculatorBasicViewController.h; sourceTree = "<group>"; };
+		7F46F06B189746FB000EE5E6 /* DHCalculatorBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCalculatorBasicViewController.m; sourceTree = "<group>"; };
+		7F46F06D1897472D000EE5E6 /* DHCalculatorAdvancedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCalculatorAdvancedViewController.h; sourceTree = "<group>"; };
+		7F46F06E1897472D000EE5E6 /* DHCalculatorAdvancedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCalculatorAdvancedViewController.m; sourceTree = "<group>"; };
+		7F46F07118974F01000EE5E6 /* DHHistoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHistoryModel.h; sourceTree = "<group>"; };
+		7F46F07218974F01000EE5E6 /* DHHistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHHistoryModel.m; sourceTree = "<group>"; };
+		7F4EEC59189845A300400C4E /* DHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTextField.h; sourceTree = "<group>"; };
+		7F4EEC5A189845A300400C4E /* DHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTextField.m; sourceTree = "<group>"; };
+		7F4EEC5E18984C6C00400C4E /* DHBasicKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHBasicKeyboardView.xib; sourceTree = "<group>"; };
+		7F5B891D189AFF2C001AF478 /* DHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHButton.h; sourceTree = "<group>"; };
+		7F5B891E189AFF2C001AF478 /* DHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHButton.m; sourceTree = "<group>"; };
+		7F65C18418A08925009E5934 /* DHHistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DHHistoryModel.xcdatamodel; sourceTree = "<group>"; };
+		7F9674211893349800144A91 /* DHCalculatorStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DHCalculatorStoryboard.storyboard; sourceTree = "<group>"; };
+		7FA3501718A1AD5F001F3FFB /* DHCalculatorTableViewCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHCalculatorTableViewCoreData.h; sourceTree = "<group>"; };
+		7FA3501818A1AD5F001F3FFB /* DHCalculatorTableViewCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCalculatorTableViewCoreData.m; sourceTree = "<group>"; };
+		7FA3501A18A1BD82001F3FFB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7FA3501C18A1D1ED001F3FFB /* HistoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryModel.h; sourceTree = "<group>"; };
+		7FA3501D18A1D1ED001F3FFB /* HistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryModel.m; sourceTree = "<group>"; };
 		7FC03E0D1746F8BC00949AA5 /* TellerCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TellerCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC03E101746F8BC00949AA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7FC03E121746F8BC00949AA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +103,8 @@
 		7FC03E341746FDA100949AA5 /* DHCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHCalculator.m; sourceTree = "<group>"; };
 		7FC03E361746FF4200949AA5 /* DHPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPair.h; sourceTree = "<group>"; };
 		7FC03E371746FF4200949AA5 /* DHPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPair.m; sourceTree = "<group>"; };
+		7FD5A3DB1899A55C0004EFD1 /* UITextField+DHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DHTextField.h"; sourceTree = "<group>"; };
+		7FD5A3DC1899A55C0004EFD1 /* UITextField+DHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DHTextField.m"; sourceTree = "<group>"; };
 		7FDE3F5C174DAF9B00018315 /* ScreenShot1_4in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot1_4in.png; sourceTree = "<group>"; };
 		7FDE3F5D174DAF9B00018315 /* ScreenShot1_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot1_ipad.png; sourceTree = "<group>"; };
 		7FDE3F5E174DAF9B00018315 /* ScreenShot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot1.png; sourceTree = "<group>"; };
@@ -80,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA3501B18A1BD82001F3FFB /* CoreData.framework in Frameworks */,
 				7FC03E111746F8BC00949AA5 /* UIKit.framework in Frameworks */,
 				7FC03E131746F8BC00949AA5 /* Foundation.framework in Frameworks */,
 				7FC03E151746F8BC00949AA5 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +128,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F46F07018974743000EE5E6 /* Calc Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7F9674211893349800144A91 /* DHCalculatorStoryboard.storyboard */,
+				7F5B891D189AFF2C001AF478 /* DHButton.h */,
+				7F5B891E189AFF2C001AF478 /* DHButton.m */,
+				7F4EEC5E18984C6C00400C4E /* DHBasicKeyboardView.xib */,
+				7F46F07118974F01000EE5E6 /* DHHistoryModel.h */,
+				7F46F07218974F01000EE5E6 /* DHHistoryModel.m */,
+				7F46F06D1897472D000EE5E6 /* DHCalculatorAdvancedViewController.h */,
+				7F46F06E1897472D000EE5E6 /* DHCalculatorAdvancedViewController.m */,
+				7F46F06A189746FB000EE5E6 /* DHCalculatorBasicViewController.h */,
+				7F46F06B189746FB000EE5E6 /* DHCalculatorBasicViewController.m */,
+				7F46F067189746CB000EE5E6 /* DHCalculatorTableViewController.h */,
+				7F46F068189746CB000EE5E6 /* DHCalculatorTableViewController.m */,
+				7F46F0641897466D000EE5E6 /* DHTabBarController.h */,
+				7F46F0651897466D000EE5E6 /* DHTabBarController.m */,
+				7F4EEC59189845A300400C4E /* DHTextField.h */,
+				7F4EEC5A189845A300400C4E /* DHTextField.m */,
+				7FA3501718A1AD5F001F3FFB /* DHCalculatorTableViewCoreData.h */,
+				7FA3501818A1AD5F001F3FFB /* DHCalculatorTableViewCoreData.m */,
+			);
+			name = "Calc Storyboards";
+			sourceTree = "<group>";
+		};
 		7FC03E041746F8BC00949AA5 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +174,7 @@
 		7FC03E0F1746F8BC00949AA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FA3501A18A1BD82001F3FFB /* CoreData.framework */,
 				7FC03E101746F8BC00949AA5 /* UIKit.framework */,
 				7FC03E121746F8BC00949AA5 /* Foundation.framework */,
 				7FC03E141746F8BC00949AA5 /* CoreGraphics.framework */,
@@ -120,6 +185,7 @@
 		7FC03E161746F8BC00949AA5 /* TellerCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				7F46F07018974743000EE5E6 /* Calc Storyboards */,
 				7FC03E1F1746F8BC00949AA5 /* DHAppDelegate.h */,
 				7FC03E201746F8BC00949AA5 /* DHAppDelegate.m */,
 				7FC03E281746F8BC00949AA5 /* DHViewController.h */,
@@ -130,6 +196,11 @@
 				7FC03E371746FF4200949AA5 /* DHPair.m */,
 				7FC03E2B1746F8BC00949AA5 /* DHViewController.xib */,
 				7FC03E171746F8BC00949AA5 /* Supporting Files */,
+				7FD5A3DB1899A55C0004EFD1 /* UITextField+DHTextField.h */,
+				7FD5A3DC1899A55C0004EFD1 /* UITextField+DHTextField.m */,
+				7FA3501C18A1D1ED001F3FFB /* HistoryModel.h */,
+				7FA3501D18A1D1ED001F3FFB /* HistoryModel.m */,
+				7F65C18318A08925009E5934 /* DHHistoryModel.xcdatamodeld */,
 			);
 			path = TellerCalculator;
 			sourceTree = "<group>";
@@ -224,6 +295,7 @@
 				7F09A8BD174723DF00572792 /* Icon@2x.png in Resources */,
 				7F044599174B2D29006FCC9F /* Icon-Small-50.png in Resources */,
 				7F04459A174B2D29006FCC9F /* Icon-Small@2x.png in Resources */,
+				7F9674221893349800144A91 /* DHCalculatorStoryboard.storyboard in Resources */,
 				7F04459B174B2D29006FCC9F /* Icon-Small.png in Resources */,
 				7F04459C174B2D29006FCC9F /* iTunesArtwork.png in Resources */,
 				7F04459D174B2D29006FCC9F /* Icon-72.png in Resources */,
@@ -231,6 +303,7 @@
 				7FDE3F62174DAF9B00018315 /* ScreenShot1_4in.png in Resources */,
 				7FDE3F63174DAF9B00018315 /* ScreenShot1_ipad.png in Resources */,
 				7FDE3F64174DAF9B00018315 /* ScreenShot1.png in Resources */,
+				7F4EEC5F18984C6C00400C4E /* DHBasicKeyboardView.xib in Resources */,
 				7FDE3F65174DAF9B00018315 /* ScreenShot2_4in.png in Resources */,
 				7FDE3F66174DAF9B00018315 /* ScreenShot2_ipad.png in Resources */,
 				7FDE3F67174DAF9B00018315 /* ScreenShot2.png in Resources */,
@@ -244,11 +317,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F46F07318974F01000EE5E6 /* DHHistoryModel.m in Sources */,
 				7FC03E1D1746F8BC00949AA5 /* main.m in Sources */,
+				7F46F06F1897472D000EE5E6 /* DHCalculatorAdvancedViewController.m in Sources */,
+				7F46F06C189746FB000EE5E6 /* DHCalculatorBasicViewController.m in Sources */,
+				7F46F069189746CB000EE5E6 /* DHCalculatorTableViewController.m in Sources */,
 				7FC03E211746F8BC00949AA5 /* DHAppDelegate.m in Sources */,
+				7FA3501918A1AD5F001F3FFB /* DHCalculatorTableViewCoreData.m in Sources */,
 				7FC03E2A1746F8BC00949AA5 /* DHViewController.m in Sources */,
+				7F5B891F189AFF2C001AF478 /* DHButton.m in Sources */,
+				7FD5A3DD1899A55C0004EFD1 /* UITextField+DHTextField.m in Sources */,
+				7F4EEC5B189845A300400C4E /* DHTextField.m in Sources */,
 				7FC03E351746FDA100949AA5 /* DHCalculator.m in Sources */,
+				7FA3501E18A1D1ED001F3FFB /* HistoryModel.m in Sources */,
 				7FC03E381746FF4200949AA5 /* DHPair.m in Sources */,
+				7F65C18518A08925009E5934 /* DHHistoryModel.xcdatamodeld in Sources */,
+				7F46F0661897466D000EE5E6 /* DHTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +425,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TellerCalculator/TellerCalculator-Prefix.pch";
 				INFOPLIST_FILE = "TellerCalculator/TellerCalculator-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -355,7 +439,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TellerCalculator/TellerCalculator-Prefix.pch";
 				INFOPLIST_FILE = "TellerCalculator/TellerCalculator-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -384,6 +468,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F65C18318A08925009E5934 /* DHHistoryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F65C18418A08925009E5934 /* DHHistoryModel.xcdatamodel */,
+			);
+			currentVersion = 7F65C18418A08925009E5934 /* DHHistoryModel.xcdatamodel */;
+			path = DHHistoryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7FC03E051746F8BC00949AA5 /* Project object */;
 }

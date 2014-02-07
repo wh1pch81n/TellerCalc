@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class DHViewController;
+@class DHCalculatorTableViewCoreData;
 
 @interface DHAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) DHViewController *viewController;
+@property (strong, nonatomic) UIViewController *viewController;
+@property (readonly, strong, nonatomic) DHCalculatorTableViewCoreData *tableViewCoreData;
 
 @end

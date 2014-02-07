@@ -9,17 +9,22 @@
 #import "DHAppDelegate.h"
 
 #import "DHViewController.h"
+#import "DHTabBarController.h"
+#import "DHCalculatorTableViewCoreData.h"
 
 @implementation DHAppDelegate
 
+@synthesize tableViewCoreData = _tableViewCoreData;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-	self.viewController = [[DHViewController alloc] initWithNibName:@"DHViewController" bundle:nil];
-	self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
-    return YES;
+	// Override point for customization after application launch.
+	DHCalculatorTableViewCoreData *tvcd = [DHCalculatorTableViewCoreData new];
+	UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
+	DHCalculatorTableViewController *controller = (DHCalculatorTableViewController *)tabBar.viewControllers.firstObject;
+	
+	controller.moc = [tvcd managedObjectContext];
+	return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -47,6 +52,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+	[_tableViewCoreData saveContext];
 }
 
 @end
