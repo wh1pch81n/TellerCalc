@@ -16,7 +16,7 @@ NSString *const kHistoryModel = @"HistoryModel";
 NSString *const kHistoryString = @"historyString";
 NSString *const kTimeStamp = @"timeStamp";
 NSString *const kMyHistoryCell = @"MyHistoryCell";
-NSString *const kCacheName = @"Master";
+NSString *const kCacheName = nil; //No cache
 
 @implementation DHCalculatorTableViewController
 
@@ -128,6 +128,8 @@ NSString *const kCacheName = @"Master";
 	//nill for section name key path means "no sections"
 	[self setFetchedResultsController:[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[self managedObjectContext]  sectionNameKeyPath:nil cacheName:kCacheName]];
 	
+    [[self fetchedResultsController] setDelegate:self];
+    
 	NSError *error = nil;
 	if (![[self fetchedResultsController] performFetch:&error]) {
 		// Replace this implementation with code to handle the error appropriately.
