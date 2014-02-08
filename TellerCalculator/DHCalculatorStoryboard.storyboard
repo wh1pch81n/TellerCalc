@@ -13,9 +13,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="glw-Xb-Iht">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="History List" id="fQS-7S-Zv5"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyHistoryCell" textLabel="sXx-4F-tFJ" detailTextLabel="szq-K4-hg8" style="IBUITableViewCellStyleSubtitle" id="1QG-3q-12r">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1QG-3q-12r" id="hNb-oj-yso">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -54,7 +61,8 @@
         <scene sceneID="HmY-cS-56Q">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="PZi-db-gmR" customClass="DHTabBarController" sceneMemberID="viewController">
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationItem key="navigationItem" id="Hjg-1p-brg"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="pQO-F6-nPX">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -83,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Equation" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-UW-dzN" customClass="DHTextField">
-                                <rect key="frame" x="20" y="40" width="280" height="59"/>
+                                <rect key="frame" x="20" y="20" width="280" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="Zof-fh-CPo"/>
@@ -94,12 +102,12 @@
                                     <outlet property="delegate" destination="WHv-1G-Ji8" id="YaM-wi-j7w"/>
                                 </connections>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3et-Pt-2ga" userLabel="View - row 0">
-                                <rect key="frame" x="20" y="107" width="280" height="63"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3et-Pt-2ga" userLabel="View - row 0">
+                                <rect key="frame" x="20" y="87" width="280" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaE-Sz-Q57" customClass="DHButton">
-                                        <rect key="frame" x="216" y="0.0" width="64" height="63"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaE-Sz-Q57" customClass="DHButton">
+                                        <rect key="frame" x="216" y="0.0" width="64" height="74"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -121,12 +129,12 @@
                                     <constraint firstItem="OaE-Sz-Q57" firstAttribute="top" secondItem="3et-Pt-2ga" secondAttribute="top" id="Zs7-Is-f5C"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tq-MO-j8d" userLabel="View - row 1">
-                                <rect key="frame" x="20" y="178" width="280" height="61"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Tq-MO-j8d" userLabel="View - row 1">
+                                <rect key="frame" x="20" y="169" width="280" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbS-Uf-P25" customClass="DHButton">
-                                        <rect key="frame" x="216" y="0.0" width="64" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbS-Uf-P25" customClass="DHButton">
+                                        <rect key="frame" x="216" y="0.0" width="64" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -140,8 +148,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="Rj7-rm-xc1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymt-Sv-K7C" customClass="DHButton">
-                                        <rect key="frame" x="144" y="0.0" width="64" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymt-Sv-K7C" customClass="DHButton">
+                                        <rect key="frame" x="144" y="0.0" width="64" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -155,8 +163,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="kTm-xd-aIg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-01-ylj" customClass="DHButton">
-                                        <rect key="frame" x="72" y="0.0" width="64" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-01-ylj" customClass="DHButton">
+                                        <rect key="frame" x="72" y="0.0" width="64" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -170,8 +178,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="XmW-Tf-weT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SC-4F-FWG" customClass="DHButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SC-4F-FWG" customClass="DHButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -208,12 +216,12 @@
                                     <constraint firstAttribute="bottom" secondItem="Ymt-Sv-K7C" secondAttribute="bottom" id="oVA-rB-teo"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-Cd-IIJ" userLabel="View - row 2">
-                                <rect key="frame" x="20" y="247" width="280" height="62"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-Cd-IIJ" userLabel="View - row 2">
+                                <rect key="frame" x="20" y="233" width="280" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-yl-5JR" customClass="DHButton">
-                                        <rect key="frame" x="216" y="-1" width="64" height="63"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-yl-5JR" customClass="DHButton">
+                                        <rect key="frame" x="216" y="-2" width="64" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -227,8 +235,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="wYp-rz-zdV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moU-nb-vcZ" customClass="DHButton">
-                                        <rect key="frame" x="144" y="-1" width="64" height="63"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moU-nb-vcZ" customClass="DHButton">
+                                        <rect key="frame" x="144" y="-2" width="64" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -242,8 +250,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="17K-Mt-rea"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPA-yD-4LA" customClass="DHButton">
-                                        <rect key="frame" x="72" y="0.0" width="64" height="62"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPA-yD-4LA" customClass="DHButton">
+                                        <rect key="frame" x="72" y="0.0" width="64" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -257,8 +265,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="FIZ-iB-yoa"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgk-Pn-Z02" customClass="DHButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="62"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgk-Pn-Z02" customClass="DHButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -296,12 +304,12 @@
                                     <constraint firstItem="dgk-Pn-Z02" firstAttribute="top" secondItem="nVY-Cd-IIJ" secondAttribute="top" id="uaF-OP-90T"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-z9-bZd" userLabel="View - row 3">
-                                <rect key="frame" x="20" y="317" width="280" height="61"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-z9-bZd" userLabel="View - row 3">
+                                <rect key="frame" x="20" y="306" width="280" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSA-od-3yn" customClass="DHButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSA-od-3yn" customClass="DHButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -315,8 +323,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="ugg-sy-0P4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cu-ge-9SF" customClass="DHButton">
-                                        <rect key="frame" x="72" y="0.0" width="64" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cu-ge-9SF" customClass="DHButton">
+                                        <rect key="frame" x="72" y="0.0" width="64" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -330,8 +338,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="DZF-FM-VIg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0B-Tw-ond" customClass="DHButton">
-                                        <rect key="frame" x="144" y="-1" width="64" height="62"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0B-Tw-ond" customClass="DHButton">
+                                        <rect key="frame" x="144" y="-1" width="64" height="73"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -345,8 +353,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="lH9-bL-hKh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQ5-VO-ZCz" customClass="DHButton">
-                                        <rect key="frame" x="216" y="-2" width="64" height="63"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQ5-VO-ZCz" customClass="DHButton">
+                                        <rect key="frame" x="216" y="-3" width="64" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -384,12 +392,12 @@
                                     <constraint firstItem="I0B-Tw-ond" firstAttribute="leading" secondItem="3cu-ge-9SF" secondAttribute="trailing" constant="8" id="yFb-AM-Rae"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4id-M7-ZkU" userLabel="View - row 4">
-                                <rect key="frame" x="20" y="386" width="280" height="61"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4id-M7-ZkU" userLabel="View - row 4">
+                                <rect key="frame" x="20" y="377" width="280" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXZ-5C-T4L" customClass="DHButton">
-                                        <rect key="frame" x="216" y="0.0" width="64" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXZ-5C-T4L" customClass="DHButton">
+                                        <rect key="frame" x="216" y="0.0" width="64" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -403,8 +411,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="4AP-tY-0wb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-C8-Gza" customClass="DHButton">
-                                        <rect key="frame" x="144" y="0.0" width="64" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-C8-Gza" customClass="DHButton">
+                                        <rect key="frame" x="144" y="0.0" width="64" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -418,8 +426,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="oYZ-Hk-GHP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMC-l4-1eF" customClass="DHButton">
-                                        <rect key="frame" x="72" y="0.0" width="64" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMC-l4-1eF" customClass="DHButton">
+                                        <rect key="frame" x="72" y="0.0" width="64" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -433,8 +441,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="Ngw-BW-MqX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkb-BQ-fJY" customClass="DHButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkb-BQ-fJY" customClass="DHButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -472,16 +480,16 @@
                                     <constraint firstItem="fXZ-5C-T4L" firstAttribute="height" secondItem="aMC-l4-1eF" secondAttribute="height" id="zIt-LD-Q0e"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If4-UK-hK0" userLabel="View - row 5">
-                                <rect key="frame" x="20" y="455" width="280" height="62"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="If4-UK-hK0" userLabel="View - row 5">
+                                <rect key="frame" x="20" y="449" width="280" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qu-RB-NIa" customClass="DHButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="62"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qu-RB-NIa" customClass="DHButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="ZbW-qs-ywd"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="134" id="ZbW-qs-ywd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="0">
@@ -494,8 +502,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="z0d-qz-opf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-Db-57U" customClass="DHButton">
-                                        <rect key="frame" x="142" y="1" width="65" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-Db-57U" customClass="DHButton">
+                                        <rect key="frame" x="142" y="0.0" width="65" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -509,8 +517,8 @@
                                             <action selector="tappedButton:" destination="WHv-1G-Ji8" eventType="touchUpInside" id="bZp-r0-HSe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx4-HD-Zq3" customClass="DHButton">
-                                        <rect key="frame" x="215" y="0.0" width="65" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx4-HD-Zq3" customClass="DHButton">
+                                        <rect key="frame" x="215" y="0.0" width="65" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -529,7 +537,6 @@
                                 <constraints>
                                     <constraint firstItem="4Qu-RB-NIa" firstAttribute="leading" secondItem="If4-UK-hK0" secondAttribute="leading" id="3B2-go-2xx"/>
                                     <constraint firstItem="Jx4-HD-Zq3" firstAttribute="top" secondItem="If4-UK-hK0" secondAttribute="top" id="3Cb-xa-WJq"/>
-                                    <constraint firstAttribute="bottom" secondItem="N5N-Db-57U" secondAttribute="bottom" id="CzR-XT-KUv"/>
                                     <constraint firstAttribute="bottom" secondItem="Jx4-HD-Zq3" secondAttribute="bottom" id="OY6-cC-wwk"/>
                                     <constraint firstAttribute="bottom" secondItem="4Qu-RB-NIa" secondAttribute="bottom" id="PJX-gw-nqC"/>
                                     <constraint firstItem="4Qu-RB-NIa" firstAttribute="top" secondItem="If4-UK-hK0" secondAttribute="top" id="Pra-Hy-RXG"/>
@@ -538,7 +545,8 @@
                                     <constraint firstAttribute="trailing" secondItem="Jx4-HD-Zq3" secondAttribute="trailing" id="bks-26-PAR"/>
                                     <constraint firstItem="4Qu-RB-NIa" firstAttribute="height" secondItem="Jx4-HD-Zq3" secondAttribute="height" id="ccl-5H-O0r"/>
                                     <constraint firstItem="Jx4-HD-Zq3" firstAttribute="width" secondItem="N5N-Db-57U" secondAttribute="width" id="dOZ-RM-GLu"/>
-                                    <constraint firstItem="N5N-Db-57U" firstAttribute="top" secondItem="If4-UK-hK0" secondAttribute="top" id="nTt-pA-fBy"/>
+                                    <constraint firstAttribute="bottom" secondItem="N5N-Db-57U" secondAttribute="bottom" id="jRV-dH-aws"/>
+                                    <constraint firstItem="N5N-Db-57U" firstAttribute="top" secondItem="If4-UK-hK0" secondAttribute="top" id="lLg-da-0zm"/>
                                     <constraint firstItem="4Qu-RB-NIa" firstAttribute="height" secondItem="N5N-Db-57U" secondAttribute="height" id="ywZ-uQ-hCG"/>
                                 </constraints>
                             </view>
@@ -564,7 +572,7 @@
                             <constraint firstAttribute="trailing" secondItem="nVY-Cd-IIJ" secondAttribute="trailing" constant="20" id="Wsl-9e-6z1"/>
                             <constraint firstItem="nVY-Cd-IIJ" firstAttribute="height" secondItem="4id-M7-ZkU" secondAttribute="height" constant="1" id="Yvr-st-TPS"/>
                             <constraint firstItem="6Tq-MO-j8d" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="ZIh-5j-DM8"/>
-                            <constraint firstItem="Jx4-HD-Zq3" firstAttribute="width" secondItem="fXZ-5C-T4L" secondAttribute="width" id="aJd-kE-wMA"/>
+                            <constraint firstItem="Jx4-HD-Zq3" firstAttribute="width" secondItem="fXZ-5C-T4L" secondAttribute="width" constant="1" id="aJd-kE-wMA"/>
                             <constraint firstItem="1aM-z9-bZd" firstAttribute="top" secondItem="nVY-Cd-IIJ" secondAttribute="bottom" constant="8" id="eZ9-eg-3Xn"/>
                             <constraint firstItem="3et-Pt-2ga" firstAttribute="top" secondItem="Bhe-UW-dzN" secondAttribute="bottom" constant="8" id="egz-W8-D7r"/>
                             <constraint firstItem="1aM-z9-bZd" firstAttribute="width" secondItem="Bhe-UW-dzN" secondAttribute="width" id="h2E-x3-m0K"/>
@@ -573,7 +581,7 @@
                             <constraint firstItem="nVY-Cd-IIJ" firstAttribute="top" secondItem="6Tq-MO-j8d" secondAttribute="bottom" constant="8" id="nCO-QB-IRB"/>
                             <constraint firstItem="1aM-z9-bZd" firstAttribute="width" secondItem="6Tq-MO-j8d" secondAttribute="width" id="sPb-My-IZ5"/>
                             <constraint firstItem="1aM-z9-bZd" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="spb-Vf-vvF"/>
-                            <constraint firstAttribute="bottom" secondItem="If4-UK-hK0" secondAttribute="bottom" constant="8" id="srp-QG-k8p"/>
+                            <constraint firstAttribute="bottom" secondItem="If4-UK-hK0" secondAttribute="bottom" constant="2" id="srp-QG-k8p"/>
                             <constraint firstItem="6Tq-MO-j8d" firstAttribute="top" secondItem="3et-Pt-2ga" secondAttribute="bottom" constant="8" id="tOs-Qz-Pht"/>
                             <constraint firstItem="4id-M7-ZkU" firstAttribute="leading" secondItem="Qaf-sy-DkE" secondAttribute="leading" constant="20" id="uxX-mj-aUk"/>
                             <constraint firstItem="nVY-Cd-IIJ" firstAttribute="height" secondItem="6Tq-MO-j8d" secondAttribute="height" constant="1" id="vEk-0T-9ys"/>
