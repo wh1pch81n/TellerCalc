@@ -26,11 +26,8 @@ NSString *const kMomd = @"momd";
  */
 - (NSURL *)applicationDocumentsDirectory {
 	NSFileManager *defaultManager = [NSFileManager defaultManager];
-	NSLog(@"%@", defaultManager);
 	NSArray *urls = [defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
-	NSLog(@"%@", urls);
 	NSURL *url = [urls lastObject];
-	NSLog(@"%@", url);
 	return url;
 }
 
@@ -79,7 +76,7 @@ NSString *const kMomd = @"momd";
 	}
 	
 	NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", kDHHistoryModel, kSqlite]];
-	NSLog(@"%@", storeURL);
+    
 	NSError *error = nil;
 	_persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
 	

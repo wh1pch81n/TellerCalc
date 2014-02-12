@@ -17,7 +17,18 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem title="History List" id="fQS-7S-Zv5"/>
+                                <navigationItem title="History List" id="fQS-7S-Zv5">
+                                    <barButtonItem key="leftBarButtonItem" title="Edit" id="NiX-xc-aIt">
+                                        <connections>
+                                            <action selector="tappedLeftButton:" destination="QHf-C9-vXp" id="6Ua-lf-J0s"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="Delete" id="sX6-2X-FmM">
+                                        <connections>
+                                            <action selector="tappedRightButton:" destination="QHf-C9-vXp" id="680-9T-yM4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
                             </items>
                         </navigationBar>
                         <prototypes>
@@ -52,6 +63,10 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="History" id="xoe-b1-EA8"/>
+                    <connections>
+                        <outlet property="leftButton" destination="NiX-xc-aIt" id="FKi-WF-7np"/>
+                        <outlet property="rightButton" destination="sX6-2X-FmM" id="684-BW-L8u"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9s8-MC-hwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

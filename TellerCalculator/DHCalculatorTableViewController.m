@@ -18,20 +18,80 @@ NSString *const kTimeStamp = @"timeStamp";
 NSString *const kMyHistoryCell = @"MyHistoryCell";
 NSString *const kCacheName = nil; //No cache
 
+NSString *const kEdit = @"Edit";
+NSString *const kDeleteAll = @"Delete All";
+NSString *const kCancel = @"Cancel";
+
+@interface DHCalculatorTableViewController ()
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *leftButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *rightButton;
+
+@end
+
 @implementation DHCalculatorTableViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-//	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"1+2"]];
-//	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"1+2x3"]];
-//	[self appendHistory:self object:[[DHHistoryModel alloc] initWithString:@"(1+2)x3"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	//[self.tableView reloadData];
+    
+    [self enterFsmDefault];
 }
 
+#pragma mark - Removing new Objects
+
+- (IBAction)tappedLeftButton:(UIBarButtonItem *)sender {
+    if (self.rightButton.enabled) {
+        [self enterFsmDefault];
+    } else {
+        [self enterFsmEdit];
+    }
+}
+
+- (IBAction)tappedRightButton:(UIBarButtonItem *)sender {
+    [self enterFsmDeleteAll];
+    [self enterFsmDefault];
+}
+
+/**
+ Enter the default state for the left and right buttons
+ left button is says edit
+ right button is not enabled and has no text
+ */
+- (void)enterFsmDefault {
+    [[self leftButton] setTitle:kEdit];
+    
+    [[self rightButton] setTitle:@""];
+    [[self rightButton] setEnabled:NO];
+}
+
+/**
+ Enter the edit state for the left and right buttons
+ left button becomes cancel
+ right button says delete all and is enabled.
+ */
+- (void)enterFsmEdit {
+    [[self leftButton] setTitle:kCancel];
+    [[self rightButton] setTitle:kDeleteAll];
+    [[self rightButton] setEnabled:YES];
+}
+
+/**
+ Enter the Delete All state.
+ will delete all the history items
+ */
+- (void)enterFsmDeleteAll {
+    [self removeAllHistory:self.rightButton];
+}
+
+#pragma mark - Adding new Object
+
+/**
+ Adds a HistoryModel entity to the Managed Object Context
+ */
 - (void)appendHistory:(id)sender object:(DHHistoryModel *)object {
 	NSManagedObjectContext *context = [[self fetchedResultsController] managedObjectContext];
 	NSEntityDescription *entityDesc = [[[self fetchedResultsController] fetchRequest] entity];
@@ -49,6 +109,19 @@ NSString *const kCacheName = nil; //No cache
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		abort();
 	}
+}
+
+#pragma mark - Delete all objects 
+
+/**
+ Removes all the Entities from the Managed object context
+ */
+- (void)removeAllHistory:(id)sender {
+    NSManagedObjectContext *context = [[self fetchedResultsController] managedObjectContext];
+    NSArray *allEntities = [[self fetchedResultsController] fetchedObjects];
+    for (NSManagedObject *mo in allEntities) {
+        [context deleteObject:mo];
+    }
 }
 
 #pragma mark - Table View
@@ -95,15 +168,8 @@ NSString *const kCacheName = nil; //No cache
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-	NSLog(@"%@", self.delegate);
 	[[self delegate] receiveSelectedTableViewObject:object];
 }
-
-#pragma mark - insert new object
-
-//- (void)insertNewObject:(id)sender {
-//	
-//}
 
 #pragma mark - Fetched Results Controller
 
