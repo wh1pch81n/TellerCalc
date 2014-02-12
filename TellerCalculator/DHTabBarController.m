@@ -59,7 +59,6 @@ NSString *const k0 = @"0";
 
 - (void)receiveSelectedTableViewObject:(id)object {
 	NSString *hs = [object valueForKey:@"historyString"];
-	NSLog(@"%@", hs);
 	[self.historyModel setHistoryString:hs];
 	[self segueToBasicCalculatorViewController];
 }
